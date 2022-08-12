@@ -68,7 +68,7 @@
                                 <rect key="frame" x="0.0" y="94" width="428" height="1472"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRu-kz-Gw0">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1700"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKK-9q-AZI" userLabel="MenuView">
                                                 <rect key="frame" x="32" y="16" width="364" height="450"/>
@@ -156,20 +156,32 @@
                                                                                 <color key="textColor" name="lightGray"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최저가 예약" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wje-bj-j9T">
-                                                                                <rect key="frame" x="7" y="75" width="46.333333333333336" height="12"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
-                                                                                <color key="textColor" name="pink"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRu-hD-ggS">
+                                                                                <rect key="frame" x="2.3333333333333286" y="75" width="55.333333333333336" height="14.333333333333329"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최저가 예약" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wje-bj-j9T">
+                                                                                        <rect key="frame" x="4.6666666666666714" y="1.3333333333333712" width="46.333333333333336" height="12"/>
+                                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                                                        <color key="textColor" name="pink"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="wje-bj-j9T" firstAttribute="centerX" secondItem="rRu-hD-ggS" secondAttribute="centerX" id="3Ja-qC-Nck"/>
+                                                                                    <constraint firstItem="wje-bj-j9T" firstAttribute="centerY" secondItem="rRu-hD-ggS" secondAttribute="centerY" id="oQa-fi-NnZ"/>
+                                                                                    <constraint firstAttribute="height" secondItem="wje-bj-j9T" secondAttribute="height" multiplier="1.2" id="xgl-Ut-Dfp"/>
+                                                                                    <constraint firstAttribute="width" secondItem="wje-bj-j9T" secondAttribute="width" multiplier="1.2" id="z8l-mG-01K"/>
+                                                                                </constraints>
+                                                                            </view>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="100" id="1CK-CB-K6E"/>
                                                                             <constraint firstItem="ZGk-5H-hiJ" firstAttribute="top" secondItem="XYn-fD-4k1" secondAttribute="bottom" constant="5" id="3R8-T6-5li"/>
                                                                             <constraint firstItem="XYn-fD-4k1" firstAttribute="centerX" secondItem="Bmc-SR-8Xx" secondAttribute="centerX" id="7Y1-I6-twF"/>
-                                                                            <constraint firstItem="wje-bj-j9T" firstAttribute="centerX" secondItem="Bmc-SR-8Xx" secondAttribute="centerX" id="Lgm-eL-GNr"/>
-                                                                            <constraint firstItem="wje-bj-j9T" firstAttribute="top" secondItem="ZGk-5H-hiJ" secondAttribute="bottom" constant="5" id="TD3-gL-eix"/>
+                                                                            <constraint firstItem="rRu-hD-ggS" firstAttribute="top" secondItem="ZGk-5H-hiJ" secondAttribute="bottom" constant="5" id="7eO-L3-ptY"/>
+                                                                            <constraint firstItem="rRu-hD-ggS" firstAttribute="centerX" secondItem="Bmc-SR-8Xx" secondAttribute="centerX" id="YZx-l3-Ebl"/>
                                                                             <constraint firstItem="XYn-fD-4k1" firstAttribute="top" secondItem="Bmc-SR-8Xx" secondAttribute="top" id="ZZh-Sw-NZf"/>
                                                                             <constraint firstItem="ZGk-5H-hiJ" firstAttribute="centerX" secondItem="Bmc-SR-8Xx" secondAttribute="centerX" id="aIi-Jy-bhD"/>
                                                                             <constraint firstAttribute="width" constant="60" id="fMy-jw-oPm"/>
@@ -242,23 +254,35 @@
                                                                                 <color key="textColor" name="lightGray"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추석·연휴 특가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k1-fY-nR6">
-                                                                                <rect key="frame" x="1" y="75" width="58.333333333333336" height="12"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
-                                                                                <color key="textColor" name="pink"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWq-kT-SZD">
+                                                                                <rect key="frame" x="-5" y="75" width="70" height="14.333333333333329"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추석·연휴 특가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnG-fU-8F2">
+                                                                                        <rect key="frame" x="6.0000000000000036" y="1.3333333333333712" width="58.333333333333343" height="12"/>
+                                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                                                        <color key="textColor" name="pink"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" secondItem="JnG-fU-8F2" secondAttribute="width" multiplier="1.2" id="Bgy-9p-Ga0"/>
+                                                                                    <constraint firstItem="JnG-fU-8F2" firstAttribute="centerX" secondItem="HWq-kT-SZD" secondAttribute="centerX" id="Vnn-bK-hUY"/>
+                                                                                    <constraint firstAttribute="height" secondItem="JnG-fU-8F2" secondAttribute="height" multiplier="1.2" id="Vw8-8R-7Ce"/>
+                                                                                    <constraint firstItem="JnG-fU-8F2" firstAttribute="centerY" secondItem="HWq-kT-SZD" secondAttribute="centerY" id="rUQ-9R-pVe"/>
+                                                                                </constraints>
+                                                                            </view>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
                                                                             <constraint firstItem="8Q4-ID-9Pe" firstAttribute="centerX" secondItem="tMD-YZ-gRh" secondAttribute="centerX" id="C3v-vn-oQu"/>
                                                                             <constraint firstAttribute="width" constant="60" id="F3E-Rf-ko4"/>
-                                                                            <constraint firstItem="5k1-fY-nR6" firstAttribute="centerX" secondItem="tMD-YZ-gRh" secondAttribute="centerX" id="LvK-1H-kjp"/>
                                                                             <constraint firstAttribute="height" constant="100" id="PYD-r1-AHv"/>
-                                                                            <constraint firstItem="5k1-fY-nR6" firstAttribute="top" secondItem="mCd-oi-9Jt" secondAttribute="bottom" constant="5" id="TwH-cm-A52"/>
                                                                             <constraint firstItem="mCd-oi-9Jt" firstAttribute="centerX" secondItem="tMD-YZ-gRh" secondAttribute="centerX" id="Um5-Ib-whe"/>
+                                                                            <constraint firstItem="HWq-kT-SZD" firstAttribute="centerX" secondItem="tMD-YZ-gRh" secondAttribute="centerX" id="b4W-qT-A2j"/>
                                                                             <constraint firstItem="8Q4-ID-9Pe" firstAttribute="top" secondItem="tMD-YZ-gRh" secondAttribute="top" id="glS-L9-067"/>
                                                                             <constraint firstItem="mCd-oi-9Jt" firstAttribute="top" secondItem="8Q4-ID-9Pe" secondAttribute="bottom" constant="5" id="li8-Bq-4NG"/>
+                                                                            <constraint firstItem="HWq-kT-SZD" firstAttribute="top" secondItem="mCd-oi-9Jt" secondAttribute="bottom" constant="5" id="y2Z-2Z-ihZ"/>
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
@@ -359,12 +383,24 @@
                                                                                 <color key="textColor" name="lightGray"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50% 반값" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNQ-ER-sbu">
-                                                                                <rect key="frame" x="8.3333333333333144" y="75" width="43.666666666666664" height="12"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
-                                                                                <color key="textColor" name="pink"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nR-d8-EgO">
+                                                                                <rect key="frame" x="3.6666666666666856" y="75" width="52.666666666666664" height="14.333333333333329"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50% 반값" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32P-OH-Il1">
+                                                                                        <rect key="frame" x="4.6666666666666288" y="1.3333333333333712" width="43.666666666666664" height="12"/>
+                                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                                                        <color key="textColor" name="pink"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstItem="32P-OH-Il1" firstAttribute="centerX" secondItem="0nR-d8-EgO" secondAttribute="centerX" id="1Ti-M0-51g"/>
+                                                                                    <constraint firstAttribute="height" secondItem="32P-OH-Il1" secondAttribute="height" multiplier="1.2" id="42d-H0-ujU"/>
+                                                                                    <constraint firstAttribute="width" secondItem="32P-OH-Il1" secondAttribute="width" multiplier="1.2" id="a9i-9p-KQf"/>
+                                                                                    <constraint firstItem="32P-OH-Il1" firstAttribute="centerY" secondItem="0nR-d8-EgO" secondAttribute="centerY" id="r5N-ei-p8v"/>
+                                                                                </constraints>
+                                                                            </view>
                                                                         </subviews>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -373,8 +409,8 @@
                                                                             <constraint firstItem="9Lw-2S-nWg" firstAttribute="top" secondItem="691-ef-MqV" secondAttribute="top" id="ive-Vg-UOU"/>
                                                                             <constraint firstAttribute="height" constant="100" id="jbK-mW-eDA"/>
                                                                             <constraint firstItem="ckr-fi-NNk" firstAttribute="top" secondItem="9Lw-2S-nWg" secondAttribute="bottom" constant="5" id="sOr-8I-s7j"/>
-                                                                            <constraint firstItem="dNQ-ER-sbu" firstAttribute="centerX" secondItem="691-ef-MqV" secondAttribute="centerX" id="wF2-1t-gSC"/>
-                                                                            <constraint firstItem="dNQ-ER-sbu" firstAttribute="top" secondItem="ckr-fi-NNk" secondAttribute="bottom" constant="5" id="xCV-5U-Wnd"/>
+                                                                            <constraint firstItem="0nR-d8-EgO" firstAttribute="centerX" secondItem="691-ef-MqV" secondAttribute="centerX" id="t3S-U7-fHL"/>
+                                                                            <constraint firstItem="0nR-d8-EgO" firstAttribute="top" secondItem="ckr-fi-NNk" secondAttribute="bottom" constant="5" id="ucU-Nq-Uf7"/>
                                                                             <constraint firstItem="ckr-fi-NNk" firstAttribute="centerX" secondItem="691-ef-MqV" secondAttribute="centerX" id="yp1-c5-Uod"/>
                                                                         </constraints>
                                                                     </view>
@@ -816,9 +852,9 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l93-jf-ROa">
-                                                <rect key="frame" x="32" y="1355.6666666666667" width="364" height="40"/>
+                                                <rect key="frame" x="32" y="1355.6666666666667" width="364" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="YSL-jX-Yrg"/>
+                                                    <constraint firstAttribute="height" constant="45" id="YSL-jX-Yrg"/>
                                                 </constraints>
                                                 <color key="tintColor" name="gray"/>
                                                 <state key="normal" title="Button"/>
@@ -827,9 +863,27 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.13(토) - 8.14(일), 성인 2명 (1박, 세금 포함가격)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPw-DQ-yJ9">
-                                                <rect key="frame" x="71" y="1403.6666666666667" width="286.33333333333331" height="17"/>
+                                                <rect key="frame" x="71" y="1408.6666666666667" width="286.33333333333331" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.78431372549019607" green="0.7803921568627451" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhQ-f7-1c5">
+                                                <rect key="frame" x="32" y="1481.6666666666667" width="293.33333333333331" height="100.33333333333326"/>
+                                                <string key="text">주식회사 인터파크 | 대표 김강세  사업자 등록번호 824-81-02515
+통신판매업 신고번호 2022-서울강남-02179
+서울특별시 강남구 삼성로 512 삼성동빌딩 10층 
+항공, 숙소 및 투어·티켓문의 1588-2539
+주식회사 인터파크는 통신판매중개자로서 통신판매의 당사자가
+아니며 상품 거래정보 및 거래 등에 대해 책임을 지지 않습니다.</string>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                <color key="textColor" red="0.61176470588235299" green="0.60784313725490191" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서비스 이용약관 | 개인정보 처리방침 | 회사 소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UgU-Jd-gbA">
+                                                <rect key="frame" x="32.000000000000014" y="1590" width="226.33333333333337" height="14.333333333333258"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -839,15 +893,18 @@
                                             <constraint firstItem="qlv-YU-JsI" firstAttribute="leading" secondItem="qRu-kz-Gw0" secondAttribute="leading" constant="32" id="5kN-7U-f54"/>
                                             <constraint firstItem="UcJ-5Y-Z5I" firstAttribute="leading" secondItem="qRu-kz-Gw0" secondAttribute="leading" constant="32" id="5pD-pu-XQU"/>
                                             <constraint firstItem="qlv-YU-JsI" firstAttribute="top" secondItem="YKK-9q-AZI" secondAttribute="bottom" constant="8" id="AQQ-tw-mXj"/>
+                                            <constraint firstItem="UgU-Jd-gbA" firstAttribute="top" secondItem="bhQ-f7-1c5" secondAttribute="bottom" constant="8" id="B49-GF-o1h"/>
                                             <constraint firstItem="BDe-7p-v9I" firstAttribute="top" secondItem="U2o-Ge-rhc" secondAttribute="bottom" constant="24" id="DZD-wI-xfK"/>
                                             <constraint firstItem="YKK-9q-AZI" firstAttribute="top" secondItem="qRu-kz-Gw0" secondAttribute="top" constant="16" id="Fqc-Sw-Fyv"/>
                                             <constraint firstItem="VPw-DQ-yJ9" firstAttribute="top" secondItem="l93-jf-ROa" secondAttribute="bottom" constant="8" id="ILU-xg-cuc"/>
+                                            <constraint firstItem="UgU-Jd-gbA" firstAttribute="leading" secondItem="qRu-kz-Gw0" secondAttribute="leading" constant="32" id="KY2-DS-VoI"/>
+                                            <constraint firstItem="bhQ-f7-1c5" firstAttribute="leading" secondItem="qRu-kz-Gw0" secondAttribute="leading" constant="32" id="LTv-pu-R8f"/>
                                             <constraint firstItem="BDe-7p-v9I" firstAttribute="leading" secondItem="qRu-kz-Gw0" secondAttribute="leading" constant="32" id="NgF-0x-5J8"/>
                                             <constraint firstItem="U2o-Ge-rhc" firstAttribute="leading" secondItem="qRu-kz-Gw0" secondAttribute="leading" constant="32" id="Sct-Nc-GGs"/>
                                             <constraint firstItem="2yB-b2-FNm" firstAttribute="leading" secondItem="qRu-kz-Gw0" secondAttribute="leading" constant="32" id="W8F-xF-9ty"/>
                                             <constraint firstAttribute="trailing" secondItem="YKK-9q-AZI" secondAttribute="trailing" constant="32" id="ag1-5E-eyg"/>
                                             <constraint firstItem="fuN-7X-OCV" firstAttribute="top" secondItem="UcJ-5Y-Z5I" secondAttribute="bottom" constant="40" id="azT-WP-AnC"/>
-                                            <constraint firstAttribute="height" priority="250" constant="1600" id="dfy-Zk-ggs"/>
+                                            <constraint firstAttribute="height" priority="250" constant="1700" id="dfy-Zk-ggs"/>
                                             <constraint firstItem="YKK-9q-AZI" firstAttribute="leading" secondItem="qRu-kz-Gw0" secondAttribute="leading" constant="32" id="ekl-dG-oLc"/>
                                             <constraint firstItem="UcJ-5Y-Z5I" firstAttribute="top" secondItem="BDe-7p-v9I" secondAttribute="bottom" constant="16" id="gfj-jT-Kjh"/>
                                             <constraint firstAttribute="trailing" secondItem="qlv-YU-JsI" secondAttribute="trailing" constant="32" id="hMO-rV-a5o"/>
@@ -856,6 +913,7 @@
                                             <constraint firstAttribute="trailing" secondItem="l93-jf-ROa" secondAttribute="trailing" constant="32" id="k4f-vw-QeI"/>
                                             <constraint firstItem="fuN-7X-OCV" firstAttribute="leading" secondItem="qRu-kz-Gw0" secondAttribute="leading" constant="32" id="kzH-2l-cBb"/>
                                             <constraint firstItem="l93-jf-ROa" firstAttribute="top" secondItem="2yB-b2-FNm" secondAttribute="bottom" constant="8" id="mDL-Md-ymb"/>
+                                            <constraint firstItem="bhQ-f7-1c5" firstAttribute="top" secondItem="VPw-DQ-yJ9" secondAttribute="bottom" constant="56" id="s38-L3-PO7"/>
                                             <constraint firstItem="2yB-b2-FNm" firstAttribute="top" secondItem="fuN-7X-OCV" secondAttribute="bottom" constant="16" id="v5U-G2-wUL"/>
                                             <constraint firstItem="VPw-DQ-yJ9" firstAttribute="centerX" secondItem="qRu-kz-Gw0" secondAttribute="centerX" id="wba-NQ-Y8X"/>
                                         </constraints>
@@ -885,6 +943,12 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="428" height="1600"/>
+                    <connections>
+                        <outlet property="moreButton" destination="l93-jf-ROa" id="GF5-rk-yck"/>
+                        <outlet property="pinkView1" destination="rRu-hD-ggS" id="e3q-Hf-9wC"/>
+                        <outlet property="pinkView2" destination="HWq-kT-SZD" id="3ve-7X-RE4"/>
+                        <outlet property="pinkView3" destination="0nR-d8-EgO" id="7wk-hb-m5D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

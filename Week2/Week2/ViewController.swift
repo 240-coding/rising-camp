@@ -9,10 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - Properties
     private let bannerImages = ["banner1", "banner2", "banner3", "banner4"]
 
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var bannerCollectionView: UICollectionView!
+    @IBOutlet var orderStatusImageView: UIImageView!
+    @IBOutlet var orderImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,16 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         configureNavigationBar()
         pageControl.addTarget(self, action: #selector(pageValueDidChanged), for: .valueChanged)
+        
+        let orderStatusTapGesture = UITapGestureRecognizer(target: self, action: #selector(orderStatusPressed))
+        orderStatusImageView.addGestureRecognizer(orderStatusTapGesture)
+        orderStatusImageView.isUserInteractionEnabled = true
+        
+        let orderTapGesture = UITapGestureRecognizer(target: self, action: #selector(orderPressed))
+        orderImageView.addGestureRecognizer(orderTapGesture)
+        orderImageView.isUserInteractionEnabled = true
+        
+        
     }
     
     func configureNavigationBar() {
@@ -35,12 +48,31 @@ class ViewController: UIViewController {
         self.navigationItem.titleView = logoImageView
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "EN", style: .plain, target: self, action: nil)
+        
+        navigationItem.backButtonTitle = ""
     }
     
     
+    // MARK: - Actions
     @objc func pageValueDidChanged() {
         let indexPath = IndexPath(row: pageControl.currentPage, section: 0)
         bannerCollectionView.scrollToItem(at: indexPath, at: .left, animated: true)
+    }
+    
+    @objc func orderStatusPressed() {
+        guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "OrderViewController") as? OrderViewController else {
+            return
+        }
+        nextViewController.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
+    @objc func orderPressed() {
+        guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else {
+            return
+        }
+        nextViewController.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
 

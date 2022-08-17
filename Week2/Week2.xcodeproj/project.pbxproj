@@ -18,6 +18,8 @@
 		89B46DB928AA6AD5009792BA /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B46DB828AA6AD5009792BA /* OrderViewController.swift */; };
 		89B46DBB28AA6ADA009792BA /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B46DBA28AA6ADA009792BA /* MoreViewController.swift */; };
 		89B46DBE28AA908D009792BA /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B46DBD28AA908D009792BA /* BannerCollectionViewCell.swift */; };
+		89ED0F7628ADA1950071E2D4 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED0F7528ADA1950071E2D4 /* MenuCell.swift */; };
+		89ED0F7928ADA8420071E2D4 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89ED0F7828ADA8420071E2D4 /* MenuModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		89B46DB828AA6AD5009792BA /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		89B46DBA28AA6ADA009792BA /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		89B46DBD28AA908D009792BA /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		89ED0F7528ADA1950071E2D4 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		89ED0F7828ADA8420071E2D4 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,18 +70,15 @@
 		89B0C8B328A944D80051F5EA /* Week2 */ = {
 			isa = PBXGroup;
 			children = (
+				89ED0F7728ADA81F0071E2D4 /* Model */,
 				89B46DBC28AA907B009792BA /* View */,
+				89ED0F7428AD32160071E2D4 /* Controller */,
 				89B0C8B428A944D80051F5EA /* AppDelegate.swift */,
 				89B0C8B628A944D80051F5EA /* SceneDelegate.swift */,
-				89B0C8B828A944D80051F5EA /* ViewController.swift */,
 				89B0C8BA28A944D80051F5EA /* Main.storyboard */,
 				89B0C8BD28A944D90051F5EA /* Assets.xcassets */,
 				89B0C8BF28A944D90051F5EA /* LaunchScreen.storyboard */,
 				89B0C8C228A944D90051F5EA /* Info.plist */,
-				89B46DB428AA6AC6009792BA /* MenuViewController.swift */,
-				89B46DB628AA6ACE009792BA /* FavoriteViewController.swift */,
-				89B46DB828AA6AD5009792BA /* OrderViewController.swift */,
-				89B46DBA28AA6ADA009792BA /* MoreViewController.swift */,
 			);
 			path = Week2;
 			sourceTree = "<group>";
@@ -86,8 +87,29 @@
 			isa = PBXGroup;
 			children = (
 				89B46DBD28AA908D009792BA /* BannerCollectionViewCell.swift */,
+				89ED0F7528ADA1950071E2D4 /* MenuCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		89ED0F7428AD32160071E2D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89B0C8B828A944D80051F5EA /* ViewController.swift */,
+				89B46DB428AA6AC6009792BA /* MenuViewController.swift */,
+				89B46DB628AA6ACE009792BA /* FavoriteViewController.swift */,
+				89B46DB828AA6AD5009792BA /* OrderViewController.swift */,
+				89B46DBA28AA6ADA009792BA /* MoreViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89ED0F7728ADA81F0071E2D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89ED0F7828ADA8420071E2D4 /* MenuModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +185,8 @@
 			files = (
 				89B46DBB28AA6ADA009792BA /* MoreViewController.swift in Sources */,
 				89B0C8B928A944D80051F5EA /* ViewController.swift in Sources */,
+				89ED0F7928ADA8420071E2D4 /* MenuModel.swift in Sources */,
+				89ED0F7628ADA1950071E2D4 /* MenuCell.swift in Sources */,
 				89B0C8B528A944D80051F5EA /* AppDelegate.swift in Sources */,
 				89B0C8B728A944D80051F5EA /* SceneDelegate.swift in Sources */,
 				89B46DB528AA6AC6009792BA /* MenuViewController.swift in Sources */,

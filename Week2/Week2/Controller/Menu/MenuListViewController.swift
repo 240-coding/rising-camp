@@ -33,7 +33,7 @@ extension MenuListViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? MenuListTableViewCell else { return UITableViewCell() }
         let menuData = menuList.menus[indexPath.row]
         cell.menuNameLabel.text = menuData.menuName
-        cell.priceLabel.text = String(menuData.price)
+        cell.priceLabel.text = "₩ \(numberFormatter(number: menuData.price))원 부터"
         cell.menuImageView.image = menuData.menuImage
         return cell
     }
@@ -52,4 +52,13 @@ extension MenuListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+extension MenuListViewController {
+    func numberFormatter(number: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        return numberFormatter.string(from: NSNumber(value: number))!
+    }
 }

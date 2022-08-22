@@ -32,7 +32,15 @@ class ViewController: UIViewController {
         orderImageView.addGestureRecognizer(orderTapGesture)
         orderImageView.isUserInteractionEnabled = true
         
+        bannerTimer()
+
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        pageControl.currentPage = 0
+        bannerCollectionView.scrollToItem(at: NSIndexPath(item: pageControl.currentPage, section: 0) as IndexPath, at: .right, animated: true)
     }
     
     func configureNavigationBar() {
@@ -71,8 +79,23 @@ class ViewController: UIViewController {
         guard let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else {
             return
         }
-        nextViewController.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(nextViewController, animated: true)
+    }
+    
+    // MARK: - Banner Timer
+    func bannerTimer() {
+        let _: Timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { (Timer) in
+            self.bannerMove()
+        }
+    }
+    func bannerMove() {
+        if pageControl.currentPage == bannerImages.count-1 {
+            bannerCollectionView.scrollToItem(at: NSIndexPath(item: 0, section: 0) as IndexPath, at: .right, animated: true)
+            pageControl.currentPage = 0
+            return
+        }
+        pageControl.currentPage += 1
+        bannerCollectionView.scrollToItem(at: NSIndexPath(item: pageControl.currentPage, section: 0) as IndexPath, at: .right, animated: true)
     }
 }
 

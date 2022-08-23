@@ -17,6 +17,10 @@
 		89B07F0E28B43217002555B3 /* NearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07F0D28B43217002555B3 /* NearViewController.swift */; };
 		89B07F1028B4321C002555B3 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07F0F28B4321C002555B3 /* ChatViewController.swift */; };
 		89B07F1228B43221002555B3 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07F1128B43221002555B3 /* MyInfoViewController.swift */; };
+		89B07F1828B43FBC002555B3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07F1728B43FBC002555B3 /* HomeTableViewCell.swift */; };
+		89B07F1B28B44BED002555B3 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07F1A28B44BED002555B3 /* HomeModel.swift */; };
+		89B07F1D28B44EFE002555B3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07F1C28B44EFE002555B3 /* Utils.swift */; };
+		89B07F1F28B45403002555B3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07F1E28B45403002555B3 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		89B07F0D28B43217002555B3 /* NearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearViewController.swift; sourceTree = "<group>"; };
 		89B07F0F28B4321C002555B3 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		89B07F1128B43221002555B3 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
+		89B07F1728B43FBC002555B3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		89B07F1A28B44BED002555B3 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		89B07F1C28B44EFE002555B3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		89B07F1E28B45403002555B3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +72,47 @@
 		89B07EF628B42015002555B3 /* Week3 */ = {
 			isa = PBXGroup;
 			children = (
+				89B07F1928B44BE8002555B3 /* Model */,
+				89B07F1628B43FAC002555B3 /* View */,
+				89B07F1528B43BD8002555B3 /* Controller */,
 				89B07EF728B42015002555B3 /* AppDelegate.swift */,
 				89B07EF928B42015002555B3 /* SceneDelegate.swift */,
+				89B07EFD28B42015002555B3 /* Main.storyboard */,
+				89B07F0028B42016002555B3 /* Assets.xcassets */,
+				89B07F0228B42016002555B3 /* LaunchScreen.storyboard */,
+				89B07F0528B42016002555B3 /* Info.plist */,
+				89B07F1C28B44EFE002555B3 /* Utils.swift */,
+				89B07F1E28B45403002555B3 /* TabBarViewController.swift */,
+			);
+			path = Week3;
+			sourceTree = "<group>";
+		};
+		89B07F1528B43BD8002555B3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				89B07EFB28B42015002555B3 /* HomeViewController.swift */,
 				89B07F0B28B43212002555B3 /* LifeViewController.swift */,
 				89B07F0D28B43217002555B3 /* NearViewController.swift */,
 				89B07F0F28B4321C002555B3 /* ChatViewController.swift */,
 				89B07F1128B43221002555B3 /* MyInfoViewController.swift */,
-				89B07EFD28B42015002555B3 /* Main.storyboard */,
-				89B07F0028B42016002555B3 /* Assets.xcassets */,
-				89B07F0228B42016002555B3 /* LaunchScreen.storyboard */,
-				89B07F0528B42016002555B3 /* Info.plist */,
 			);
-			path = Week3;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89B07F1628B43FAC002555B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89B07F1728B43FBC002555B3 /* HomeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89B07F1928B44BE8002555B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89B07F1A28B44BED002555B3 /* HomeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,10 +188,14 @@
 			files = (
 				89B07EFC28B42015002555B3 /* HomeViewController.swift in Sources */,
 				89B07EF828B42015002555B3 /* AppDelegate.swift in Sources */,
+				89B07F1F28B45403002555B3 /* TabBarViewController.swift in Sources */,
 				89B07F0E28B43217002555B3 /* NearViewController.swift in Sources */,
 				89B07F1228B43221002555B3 /* MyInfoViewController.swift in Sources */,
 				89B07F0C28B43212002555B3 /* LifeViewController.swift in Sources */,
+				89B07F1D28B44EFE002555B3 /* Utils.swift in Sources */,
 				89B07F1028B4321C002555B3 /* ChatViewController.swift in Sources */,
+				89B07F1828B43FBC002555B3 /* HomeTableViewCell.swift in Sources */,
+				89B07F1B28B44BED002555B3 /* HomeModel.swift in Sources */,
 				89B07EFA28B42015002555B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

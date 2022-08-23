@@ -21,13 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
         }
-//        if #available(iOS 15, *) {
-//            let appearance = UITabBarAppearance()
-//            appearance.configureWithOpaqueBackground()
-//            appearance.backgroundColor = .white
-//            UITabBar.appearance().standardAppearance = appearance
-//            UITabBar.appearance().scrollEdgeAppearance = appearance
-//        }
+        if #available(iOS 15, *) {
+            let appearance = UITabBarAppearance()
+            let tabBar = UITabBar()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = .white
+            tabBar.standardAppearance = appearance
+            tabBar.unselectedItemTintColor = UIColor(named: "Black")!
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+            UITabBar.appearance().standardAppearance = appearance
+        }
         return true
     }
 

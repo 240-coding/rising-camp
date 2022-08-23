@@ -13,9 +13,11 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-//        tabBar.unselectedItemTintColor = UIColor(named: "Black")
-//        tabBar.backgroundColor = .white
-
+        tabBar.unselectedItemTintColor = UIColor(named: "Black")
+        tabBar.backgroundColor = .white
+        tabBar.layer.borderWidth = 0.5
+        tabBar.layer.borderColor = UIColor.lightGray.cgColor
+        tabBar.clipsToBounds = true
     }
     
 

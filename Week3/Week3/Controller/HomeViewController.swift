@@ -19,11 +19,15 @@ class HomeViewController: UIViewController {
         HomeModel(title: "i7 고사양 사무용 컴퓨터 본체", location: "마포구 대현동", promotion: 3, price: 450000, comment: 2, heart: 9),
         HomeModel(title: "삼성 유선청소기", location: "마포구 아현동", promotion: 2, price: 30000, comment: 0, heart: 7)
     ]
+    
+    @IBOutlet var addButton: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 //        configureTabBar()
+        configureAddButton()
     }
     
     func configureTabBar() {
@@ -34,6 +38,18 @@ class HomeViewController: UIViewController {
         self.tabBarController?.tabBar.clipsToBounds = true
     }
 
+    func configureAddButton() {
+        addButton.layer.cornerRadius = addButton.frame.height / 2
+        addButton.layer.shadowColor = UIColor.lightGray.cgColor
+        addButton.layer.shadowOpacity = 0.5
+        addButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        addButton.layer.shadowRadius = 5
+    }
+    
+    @IBAction func pressAddButton(_ sender: Any) {
+        print("Pressed Button")
+    }
+    
 
 }
 
@@ -44,6 +60,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
+        cell.selectionStyle = .none
+        
         cell.thumbnailImageView.image = UIImage(named: "thumbnail")
         cell.titleLabel.text = homeData[indexPath.row].title
         cell.locationLabel.text = homeData[indexPath.row].location

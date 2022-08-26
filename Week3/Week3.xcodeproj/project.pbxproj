@@ -21,6 +21,8 @@
 		89B07F1B28B44BED002555B3 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07F1A28B44BED002555B3 /* HomeModel.swift */; };
 		89B07F1D28B44EFE002555B3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07F1C28B44EFE002555B3 /* Utils.swift */; };
 		89B07F1F28B45403002555B3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07F1E28B45403002555B3 /* TabBarViewController.swift */; };
+		89CDF61428B9259000E609FD /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CDF61328B9259000E609FD /* ChatTableViewCell.swift */; };
+		89CDF61628B92C7D00E609FD /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CDF61528B92C7D00E609FD /* ChatModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		89B07F1A28B44BED002555B3 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		89B07F1C28B44EFE002555B3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		89B07F1E28B45403002555B3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		89CDF61328B9259000E609FD /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		89CDF61528B92C7D00E609FD /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				89B07F1728B43FBC002555B3 /* HomeTableViewCell.swift */,
+				89CDF61328B9259000E609FD /* ChatTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				89B07F1A28B44BED002555B3 /* HomeModel.swift */,
+				89CDF61528B92C7D00E609FD /* ChatModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,7 +201,9 @@
 				89B07F1D28B44EFE002555B3 /* Utils.swift in Sources */,
 				89B07F1028B4321C002555B3 /* ChatViewController.swift in Sources */,
 				89B07F1828B43FBC002555B3 /* HomeTableViewCell.swift in Sources */,
+				89CDF61428B9259000E609FD /* ChatTableViewCell.swift in Sources */,
 				89B07F1B28B44BED002555B3 /* HomeModel.swift in Sources */,
+				89CDF61628B92C7D00E609FD /* ChatModel.swift in Sources */,
 				89B07EFA28B42015002555B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

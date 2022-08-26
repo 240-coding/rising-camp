@@ -23,6 +23,11 @@
 		89B07F1F28B45403002555B3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B07F1E28B45403002555B3 /* TabBarViewController.swift */; };
 		89CDF61428B9259000E609FD /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CDF61328B9259000E609FD /* ChatTableViewCell.swift */; };
 		89CDF61628B92C7D00E609FD /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CDF61528B92C7D00E609FD /* ChatModel.swift */; };
+		89CDF62028B9477A00E609FD /* MyInfoTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CDF61F28B9477A00E609FD /* MyInfoTableViewHeader.swift */; };
+		89CDF62228B9482200E609FD /* MyInfoTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89CDF62128B9482200E609FD /* MyInfoTableViewHeader.xib */; };
+		89CDF62428B94A9B00E609FD /* MyInfoTitleTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89CDF62328B94A9B00E609FD /* MyInfoTitleTableViewHeader.xib */; };
+		89CDF62828B94AAD00E609FD /* MyInfoTitleTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CDF62728B94AAD00E609FD /* MyInfoTitleTableViewHeader.swift */; };
+		89CDF62A28B94DBA00E609FD /* MyInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CDF62928B94DBA00E609FD /* MyInfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,11 @@
 		89B07F1E28B45403002555B3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		89CDF61328B9259000E609FD /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		89CDF61528B92C7D00E609FD /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		89CDF61F28B9477A00E609FD /* MyInfoTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoTableViewHeader.swift; sourceTree = "<group>"; };
+		89CDF62128B9482200E609FD /* MyInfoTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoTableViewHeader.xib; sourceTree = "<group>"; };
+		89CDF62328B94A9B00E609FD /* MyInfoTitleTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyInfoTitleTableViewHeader.xib; sourceTree = "<group>"; };
+		89CDF62728B94AAD00E609FD /* MyInfoTitleTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoTitleTableViewHeader.swift; sourceTree = "<group>"; };
+		89CDF62928B94DBA00E609FD /* MyInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +118,11 @@
 			children = (
 				89B07F1728B43FBC002555B3 /* HomeTableViewCell.swift */,
 				89CDF61328B9259000E609FD /* ChatTableViewCell.swift */,
+				89CDF61F28B9477A00E609FD /* MyInfoTableViewHeader.swift */,
+				89CDF62128B9482200E609FD /* MyInfoTableViewHeader.xib */,
+				89CDF62728B94AAD00E609FD /* MyInfoTitleTableViewHeader.swift */,
+				89CDF62328B94A9B00E609FD /* MyInfoTitleTableViewHeader.xib */,
+				89CDF62928B94DBA00E609FD /* MyInfoTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +194,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89CDF62428B94A9B00E609FD /* MyInfoTitleTableViewHeader.xib in Resources */,
+				89CDF62228B9482200E609FD /* MyInfoTableViewHeader.xib in Resources */,
 				89B07F0428B42016002555B3 /* LaunchScreen.storyboard in Resources */,
 				89B07F0128B42016002555B3 /* Assets.xcassets in Resources */,
 				89B07EFF28B42015002555B3 /* Main.storyboard in Resources */,
@@ -192,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89CDF62828B94AAD00E609FD /* MyInfoTitleTableViewHeader.swift in Sources */,
 				89B07EFC28B42015002555B3 /* HomeViewController.swift in Sources */,
 				89B07EF828B42015002555B3 /* AppDelegate.swift in Sources */,
 				89B07F1F28B45403002555B3 /* TabBarViewController.swift in Sources */,
@@ -200,6 +218,8 @@
 				89B07F0C28B43212002555B3 /* LifeViewController.swift in Sources */,
 				89B07F1D28B44EFE002555B3 /* Utils.swift in Sources */,
 				89B07F1028B4321C002555B3 /* ChatViewController.swift in Sources */,
+				89CDF62A28B94DBA00E609FD /* MyInfoTableViewCell.swift in Sources */,
+				89CDF62028B9477A00E609FD /* MyInfoTableViewHeader.swift in Sources */,
 				89B07F1828B43FBC002555B3 /* HomeTableViewCell.swift in Sources */,
 				89CDF61428B9259000E609FD /* ChatTableViewCell.swift in Sources */,
 				89B07F1B28B44BED002555B3 /* HomeModel.swift in Sources */,

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SecondCell" id="gTV-IL-0wX" customClass="SecondCollectionViewCell" customModule="Week3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="142"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="142"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KQ2-R0-INX">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="142"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oj2-kL-KJm">
+                                <rect key="frame" x="16" y="16" width="311" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가장 가까운 동네 알바, 추석 단기 알바도 당근에서" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPf-up-rlL">
+                                        <rect key="frame" x="24" y="24" width="145" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.094117647058823528" green="0.24705882352941178" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NfJ-An-eRB">
+                                        <rect key="frame" x="24" y="73.5" width="156.5" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추석 알바 일자리 보러가기" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZS-qA-dVQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="144" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                <color key="textColor" red="0.094117647060000004" green="0.2470588235" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HvL-hK-2zc">
+                                                <rect key="frame" x="144" y="2" width="12.5" height="16.5"/>
+                                                <color key="tintColor" red="0.098039215690000001" green="0.2470588235" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="KAd-fL-fHO">
+                                        <rect key="frame" x="208" y="7.5" width="95" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="95" id="d6w-Cz-k6k"/>
+                                            <constraint firstAttribute="height" constant="95" id="zMK-Tr-zcG"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274509803915" green="0.98039215686274506" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="NfJ-An-eRB" firstAttribute="leading" secondItem="Oj2-kL-KJm" secondAttribute="leading" constant="24" id="Hln-6t-mjl"/>
+                                    <constraint firstItem="KAd-fL-fHO" firstAttribute="centerY" secondItem="Oj2-kL-KJm" secondAttribute="centerY" id="I2W-64-fLN"/>
+                                    <constraint firstItem="NfJ-An-eRB" firstAttribute="top" secondItem="aPf-up-rlL" secondAttribute="bottom" constant="16" id="YwQ-p0-15g"/>
+                                    <constraint firstItem="aPf-up-rlL" firstAttribute="top" secondItem="Oj2-kL-KJm" secondAttribute="top" constant="24" id="hlZ-1F-ZH1"/>
+                                    <constraint firstAttribute="trailing" secondItem="KAd-fL-fHO" secondAttribute="trailing" constant="8" id="jjH-ld-Ctq"/>
+                                    <constraint firstItem="aPf-up-rlL" firstAttribute="leading" secondItem="Oj2-kL-KJm" secondAttribute="leading" constant="24" id="qqK-ZM-U43"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Oj2-kL-KJm" secondAttribute="bottom" constant="16" id="KZV-dq-zIO"/>
+                            <constraint firstItem="Oj2-kL-KJm" firstAttribute="top" secondItem="KQ2-R0-INX" secondAttribute="top" constant="16" id="Qaa-RI-siN"/>
+                            <constraint firstAttribute="trailing" secondItem="Oj2-kL-KJm" secondAttribute="trailing" constant="16" id="UaF-KR-d3J"/>
+                            <constraint firstItem="Oj2-kL-KJm" firstAttribute="leading" secondItem="KQ2-R0-INX" secondAttribute="leading" constant="16" id="cly-vo-eKG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="KQ2-R0-INX" secondAttribute="trailing" id="HDu-0n-gXv"/>
+                <constraint firstItem="KQ2-R0-INX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OZb-9J-zYP"/>
+                <constraint firstAttribute="bottom" secondItem="KQ2-R0-INX" secondAttribute="bottom" id="Yl2-QE-Bhr"/>
+                <constraint firstItem="KQ2-R0-INX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZDI-Mb-0qD"/>
+            </constraints>
+            <size key="customSize" width="343" height="142"/>
+            <connections>
+                <outlet property="bannerView" destination="Oj2-kL-KJm" id="9lM-hz-nMS"/>
+            </connections>
+            <point key="canvasLocation" x="348.55072463768118" y="100.44642857142857"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="banner" width="734" height="662"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+    </resources>
+</document>

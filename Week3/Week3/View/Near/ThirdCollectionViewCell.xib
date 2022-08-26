@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThirdCell" id="gTV-IL-0wX" customClass="ThirdCollectionViewCell" customModule="Week3" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="430"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="435" height="430"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRb-19-vFU">
+                        <rect key="frame" x="0.0" y="0.0" width="435" height="430"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GXu-he-1DV">
+                                <rect key="frame" x="16" y="70" width="237.5" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이런 상품은 어떠세요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5Q-2S-xEh">
+                                        <rect key="frame" x="0.0" y="0.0" width="237.5" height="23"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임님이 봤던 상품을 바탕으로 제안해요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ms-Cs-IyS">
+                                        <rect key="frame" x="0.0" y="33" width="237.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nearshop" translatesAutoresizingMaskIntoConstraints="NO" id="POQ-mX-zcV">
+                                <rect key="frame" x="16" y="24" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Xk3-Nx-4jE"/>
+                                    <constraint firstAttribute="height" constant="30" id="cEo-5T-2kD"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="cOT-4M-Zea">
+                                <rect key="frame" x="0.0" y="136" width="435" height="278"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0RI-S1-wHK">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="gTV-IL-0wX" id="Yh7-9e-eLh"/>
+                                    <outlet property="delegate" destination="gTV-IL-0wX" id="SOy-bm-IeP"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="POQ-mX-zcV" firstAttribute="top" secondItem="rRb-19-vFU" secondAttribute="top" constant="24" id="7De-uV-blW"/>
+                            <constraint firstItem="POQ-mX-zcV" firstAttribute="leading" secondItem="rRb-19-vFU" secondAttribute="leading" constant="16" id="8Ai-XB-vvU"/>
+                            <constraint firstAttribute="trailing" secondItem="cOT-4M-Zea" secondAttribute="trailing" id="ATW-z1-TgT"/>
+                            <constraint firstAttribute="bottom" secondItem="cOT-4M-Zea" secondAttribute="bottom" constant="16" id="OjH-Nb-JqX"/>
+                            <constraint firstItem="GXu-he-1DV" firstAttribute="leading" secondItem="rRb-19-vFU" secondAttribute="leading" constant="16" id="T2K-SO-nat"/>
+                            <constraint firstItem="GXu-he-1DV" firstAttribute="top" secondItem="POQ-mX-zcV" secondAttribute="bottom" constant="16" id="ZP4-5l-qyW"/>
+                            <constraint firstItem="cOT-4M-Zea" firstAttribute="top" secondItem="GXu-he-1DV" secondAttribute="bottom" constant="16" id="d98-tj-rHt"/>
+                            <constraint firstItem="cOT-4M-Zea" firstAttribute="leading" secondItem="rRb-19-vFU" secondAttribute="leading" id="ghv-fd-wMf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rRb-19-vFU" secondAttribute="bottom" id="22U-JC-LBB"/>
+                <constraint firstAttribute="trailing" secondItem="rRb-19-vFU" secondAttribute="trailing" id="3gR-aF-k17"/>
+                <constraint firstItem="rRb-19-vFU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7RS-Qg-sfB"/>
+                <constraint firstItem="rRb-19-vFU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ske-Av-K3D"/>
+            </constraints>
+            <size key="customSize" width="435" height="430"/>
+            <connections>
+                <outlet property="collectionView" destination="cOT-4M-Zea" id="yf2-DP-9Pu"/>
+            </connections>
+            <point key="canvasLocation" x="303.62318840579712" y="147.99107142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="nearshop" width="178" height="38"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

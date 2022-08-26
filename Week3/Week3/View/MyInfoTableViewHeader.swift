@@ -8,6 +8,12 @@
 import UIKit
 
 class MyInfoTableViewHeader: UITableViewHeaderFooterView {
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var payView: UIView!
+    @IBOutlet weak var menuIconImageView1: UIImageView!
+    @IBOutlet weak var menuIconImageView2: UIImageView!
+    @IBOutlet weak var menuIconImageView3: UIImageView!
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -16,8 +22,5 @@ class MyInfoTableViewHeader: UITableViewHeaderFooterView {
         // Drawing code
     }
     */
-    override func prepareForReuse() {
-        super.prepareForReuse()
-    }
 
 }

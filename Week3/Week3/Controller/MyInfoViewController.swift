@@ -71,6 +71,21 @@ extension MyInfoViewController: UITableViewDelegate, UITableViewDataSource {
         if section == 0 {
             let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "myInfoHeader") as! MyInfoTableViewHeader
             
+            header.profileImageView.layer.masksToBounds = true
+            header.profileImageView.layer.cornerRadius = header.profileImageView.frame.height / 2
+            header.profileImageView.layer.borderColor = UIColor.systemGray5.cgColor
+            header.profileImageView.layer.borderWidth = 1
+            header.menuIconImageView1.layer.masksToBounds = true
+            header.menuIconImageView1.layer.cornerRadius = header.menuIconImageView1.frame.height / 2
+            header.menuIconImageView2.layer.masksToBounds = true
+            header.menuIconImageView2.layer.cornerRadius = header.menuIconImageView2.frame.height / 2
+            header.menuIconImageView3.layer.masksToBounds = true
+            header.menuIconImageView3.layer.cornerRadius = header.menuIconImageView3.frame.height / 2
+
+            header.payView.layer.borderWidth = 1.5
+            header.payView.layer.borderColor = UIColor(named: "Orange")?.cgColor
+            header.payView.layer.cornerRadius = 5
+            
             return header
         } else {
             let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "myInfoTitleHeader") as! MyInfoTitleTableViewHeader

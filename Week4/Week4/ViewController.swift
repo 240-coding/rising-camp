@@ -11,12 +11,21 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     @IBOutlet var toolButtons: [UIButton]!
-    var selectedTool = -1
+    
+    @IBOutlet weak var bagLabelView: UIView!
+    @IBOutlet weak var bagLabel: UILabel!
+    
+    @IBOutlet weak var lifeLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    var selectedTool = -1 // -1: none, 0: 주전자, 1: 팥, 2: 손
+    var life = 3
+    var score = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        bagLabelView.layer.cornerRadius = bagLabelView.frame.height / 2
     }
     
     @IBAction func pressedToolButton(_ sender: UIButton) {

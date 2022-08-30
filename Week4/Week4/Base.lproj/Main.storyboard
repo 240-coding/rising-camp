@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Week4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="mjh-R8-9il">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrD-wf-hef">
+                                <rect key="frame" x="15" y="720" width="360" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dM3-eZ-JWV">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="4Hi-Qz-viY"/>
+                                            <constraint firstAttribute="height" constant="90" id="HMx-hL-Mhs"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="tool1"/>
+                                        <connections>
+                                            <action selector="pressedToolButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H03-hT-vef"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNA-rx-t1Q">
+                                        <rect key="frame" x="90" y="0.0" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="eO8-VS-J6Z"/>
+                                            <constraint firstAttribute="height" constant="90" id="mAK-YF-enN"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="tool2"/>
+                                        <connections>
+                                            <action selector="pressedToolButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WK4-nZ-81g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERq-hA-FJp">
+                                        <rect key="frame" x="180" y="0.0" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="3Jq-a4-Dgf"/>
+                                            <constraint firstAttribute="height" constant="90" id="Hqu-dC-A1B"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="tool3"/>
+                                        <connections>
+                                            <action selector="pressedToolButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYL-IM-N0T"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvE-qX-eI1">
+                                        <rect key="frame" x="270" y="0.0" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="ZvU-mX-5Oj"/>
+                                            <constraint firstAttribute="height" constant="90" id="cJn-tk-2hw"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="bag"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IrD-wf-hef" secondAttribute="bottom" id="0lh-y0-38H"/>
+                            <constraint firstItem="IrD-wf-hef" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B2s-fo-Nu4"/>
+                            <constraint firstItem="mjh-R8-9il" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M0V-8m-gEv"/>
+                            <constraint firstItem="mjh-R8-9il" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UqO-zf-oda"/>
+                            <constraint firstItem="mjh-R8-9il" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gVk-wp-9LI"/>
+                            <constraint firstAttribute="bottom" secondItem="mjh-R8-9il" secondAttribute="bottom" id="sBi-sL-oFb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="toolButtons" destination="dM3-eZ-JWV" collectionClass="NSMutableArray" id="eSH-uE-CCj"/>
+                        <outletCollection property="toolButtons" destination="hNA-rx-t1Q" collectionClass="NSMutableArray" id="cms-fc-MHa"/>
+                        <outletCollection property="toolButtons" destination="ERq-hA-FJp" collectionClass="NSMutableArray" id="gS3-Pz-GiG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="83.886255924170612"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="586" height="1266"/>
+        <image name="bag" width="80" height="80"/>
+        <image name="tool1" width="80" height="80"/>
+        <image name="tool2" width="80" height="80"/>
+        <image name="tool3" width="80" height="80"/>
+    </resources>
 </document>

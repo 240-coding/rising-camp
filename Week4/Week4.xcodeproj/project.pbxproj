@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		896734B328C001B700F5E1C6 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896734B228C001B700F5E1C6 /* MusicPlayer.swift */; };
+		896734B528C003C800F5E1C6 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896734B428C003C800F5E1C6 /* backgroundMusic.mp3 */; };
 		89FE5D9328BE9928005B30A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE5D9228BE9928005B30A3 /* AppDelegate.swift */; };
 		89FE5D9528BE9928005B30A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE5D9428BE9928005B30A3 /* SceneDelegate.swift */; };
 		89FE5D9728BE9928005B30A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FE5D9628BE9928005B30A3 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		896734B228C001B700F5E1C6 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		896734B428C003C800F5E1C6 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		89FE5D8F28BE9928005B30A3 /* Week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89FE5D9228BE9928005B30A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89FE5D9428BE9928005B30A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,10 +63,12 @@
 				89FE5D9228BE9928005B30A3 /* AppDelegate.swift */,
 				89FE5D9428BE9928005B30A3 /* SceneDelegate.swift */,
 				89FE5D9628BE9928005B30A3 /* ViewController.swift */,
+				896734B228C001B700F5E1C6 /* MusicPlayer.swift */,
 				89FE5D9828BE9928005B30A3 /* Main.storyboard */,
 				89FE5D9B28BE992B005B30A3 /* Assets.xcassets */,
 				89FE5D9D28BE992B005B30A3 /* LaunchScreen.storyboard */,
 				89FE5DA028BE992B005B30A3 /* Info.plist */,
+				896734B428C003C800F5E1C6 /* backgroundMusic.mp3 */,
 			);
 			path = Week4;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			files = (
 				89FE5D9F28BE992B005B30A3 /* LaunchScreen.storyboard in Resources */,
 				89FE5D9C28BE992B005B30A3 /* Assets.xcassets in Resources */,
+				896734B528C003C800F5E1C6 /* backgroundMusic.mp3 in Resources */,
 				89FE5D9A28BE9928005B30A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			files = (
 				89FE5D9728BE9928005B30A3 /* ViewController.swift in Sources */,
 				89FE5D9328BE9928005B30A3 /* AppDelegate.swift in Sources */,
+				896734B328C001B700F5E1C6 /* MusicPlayer.swift in Sources */,
 				89FE5D9528BE9928005B30A3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

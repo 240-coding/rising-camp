@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         orderView.forEach { view in
             view.isHidden = true
         }
+        MusicPlayer.shared.startBackgroundMusic()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -257,7 +258,6 @@ class ViewController: UIViewController {
     // MARK: - 봉투 관련
     
     @IBAction func pressedBagButton() {
-        print(boongInBagAmount)
         if boongInBagAmount == orderBoongAmount[0] {
             setAfterOrderSuccess(0)
         } else if boongInBagAmount == orderBoongAmount[1] {
@@ -266,7 +266,6 @@ class ViewController: UIViewController {
     }
     
     func setAfterOrderSuccess(_ index: Int) {
-        print("성공!")
         score += 10
         scoreLabel.text = String(score)
         

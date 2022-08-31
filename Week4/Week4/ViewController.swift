@@ -259,21 +259,29 @@ class ViewController: UIViewController {
     @IBAction func pressedBagButton() {
         print(boongInBagAmount)
         if boongInBagAmount == orderBoongAmount[0] {
-            print("성공!")
-            score += 10
-            scoreLabel.text = String(score)
-            initOrders()
-            initBag()
+            setAfterOrderSuccess(0)
+        } else if boongInBagAmount == orderBoongAmount[1] {
+            setAfterOrderSuccess(1)
         }
     }
     
-    func initOrders() {
-        orderView[0].isHidden = true
-        orderStatus[0] = -1
-        orderBoongAmount[0] = -1
-        orderIsRunning[0] = false
-        orderTimeCount[0] = 0
-        orderTimer[0].invalidate()
+    func setAfterOrderSuccess(_ index: Int) {
+        print("성공!")
+        score += 10
+        scoreLabel.text = String(score)
+        
+        initOrders(index)
+        initBag()
+    }
+    
+    func initOrders(_ index: Int) {
+        orderView[index].backgroundColor = .white
+        orderView[index].isHidden = true
+        orderStatus[index] = -1
+        orderBoongAmount[index] = -1
+        orderIsRunning[index] = false
+        orderTimeCount[index] = 0
+        orderTimer[index].invalidate()
     }
     
     func initBag() {

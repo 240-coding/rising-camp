@@ -69,6 +69,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="bag"/>
+                                                <connections>
+                                                    <action selector="pressedBagButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="S3d-wz-VAG"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sev-ea-Z9K">
                                                 <rect key="frame" x="62" y="62" width="20" height="20"/>
@@ -246,6 +249,63 @@
                                     <constraint firstItem="lnJ-f0-zKJ" firstAttribute="top" secondItem="syU-Sc-1Zg" secondAttribute="top" constant="4" id="zbg-EI-K0b"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tfJ-w0-vpd">
+                                <rect key="frame" x="35" y="90.333333333333314" width="320" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grs-hd-Tof">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;주문서&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nix-xe-HKq">
+                                                <rect key="frame" x="42.666666666666671" y="15.999999999999998" width="65" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="붕어빵 0개!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOA-gz-fln">
+                                                <rect key="frame" x="30.666666666666671" y="59.000000000000014" width="89" height="23"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="YOA-gz-fln" firstAttribute="centerX" secondItem="grs-hd-Tof" secondAttribute="centerX" id="6R7-0K-edQ"/>
+                                            <constraint firstAttribute="width" constant="150" id="6TS-QW-ked"/>
+                                            <constraint firstAttribute="height" constant="120" id="UzV-d4-eBL"/>
+                                            <constraint firstItem="nix-xe-HKq" firstAttribute="top" secondItem="grs-hd-Tof" secondAttribute="top" constant="16" id="VIS-v6-OoV"/>
+                                            <constraint firstAttribute="bottom" secondItem="YOA-gz-fln" secondAttribute="bottom" constant="38" id="bap-JL-6d8"/>
+                                            <constraint firstItem="nix-xe-HKq" firstAttribute="centerX" secondItem="grs-hd-Tof" secondAttribute="centerX" id="dg5-A6-nKH"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xc4-WS-ZK1">
+                                        <rect key="frame" x="170" y="0.0" width="150" height="120"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;주문서&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t56-7s-HKO">
+                                                <rect key="frame" x="42.666666666666657" y="15.999999999999998" width="65" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="붕어빵 0개!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKn-Wt-68u">
+                                                <rect key="frame" x="30.666666666666657" y="59.000000000000014" width="89" height="23"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="lKn-Wt-68u" firstAttribute="centerX" secondItem="Xc4-WS-ZK1" secondAttribute="centerX" id="PRa-Fh-nqg"/>
+                                            <constraint firstAttribute="bottom" secondItem="lKn-Wt-68u" secondAttribute="bottom" constant="38" id="jIg-3C-hHi"/>
+                                            <constraint firstAttribute="width" constant="150" id="jbR-IW-HrS"/>
+                                            <constraint firstItem="t56-7s-HKO" firstAttribute="top" secondItem="Xc4-WS-ZK1" secondAttribute="top" constant="16" id="lHs-j5-vcR"/>
+                                            <constraint firstItem="t56-7s-HKO" firstAttribute="centerX" secondItem="Xc4-WS-ZK1" secondAttribute="centerX" id="ljz-6t-Zt5"/>
+                                            <constraint firstAttribute="height" constant="120" id="yWJ-cQ-0Ys"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
@@ -258,7 +318,9 @@
                             <constraint firstItem="IrD-wf-hef" firstAttribute="top" secondItem="V8U-jL-pjE" secondAttribute="bottom" constant="21" id="eZK-7R-Tav"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="syU-Sc-1Zg" secondAttribute="trailing" constant="8" id="f8T-jy-HNp"/>
                             <constraint firstItem="mjh-R8-9il" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gVk-wp-9LI"/>
+                            <constraint firstItem="tfJ-w0-vpd" firstAttribute="top" secondItem="syU-Sc-1Zg" secondAttribute="bottom" constant="10" id="prr-to-gSX"/>
                             <constraint firstAttribute="bottom" secondItem="mjh-R8-9il" secondAttribute="bottom" id="sBi-sL-oFb"/>
+                            <constraint firstItem="tfJ-w0-vpd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yoT-WM-UHD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -277,6 +339,10 @@
                         <outletCollection property="boongButtons" destination="ngj-6v-4zJ" collectionClass="NSMutableArray" id="lpz-DA-vlE"/>
                         <outletCollection property="boongButtons" destination="Lko-X3-b5f" collectionClass="NSMutableArray" id="mcu-cg-Nlv"/>
                         <outletCollection property="boongButtons" destination="aRH-0C-d00" collectionClass="NSMutableArray" id="5Sc-7W-haW"/>
+                        <outletCollection property="orderLabel" destination="YOA-gz-fln" collectionClass="NSMutableArray" id="0he-AN-AFT"/>
+                        <outletCollection property="orderLabel" destination="lKn-Wt-68u" collectionClass="NSMutableArray" id="oYd-uD-de6"/>
+                        <outletCollection property="orderView" destination="grs-hd-Tof" collectionClass="NSMutableArray" id="atd-LW-7Rn"/>
+                        <outletCollection property="orderView" destination="Xc4-WS-ZK1" collectionClass="NSMutableArray" id="dbK-AK-FjM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

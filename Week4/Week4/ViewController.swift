@@ -48,12 +48,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         bagLabelView.layer.cornerRadius = bagLabelView.frame.height / 2
         orderView.forEach { view in
             view.isHidden = true
         }
-//        startMainTimer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,47 +72,52 @@ class ViewController: UIViewController {
     @objc func countMainTime() {
         mainTimeCount += 1
         let isOrderEnabled = Bool.random()
-        print(isOrderEnabled)
-        if isOrderEnabled && orderStatus[0] == -1 && mainTimeCount % 3 == 0 {
-            print("주문!!")
+        let orderIndex = Int.random(in: 0...1)
+        if isOrderEnabled && orderStatus[orderIndex] == -1 && mainTimeCount % 3 == 0 {
             let orderAmount = Int.random(in: 1...6)
-            self.orderBoongAmount[0] = orderAmount
+            self.orderBoongAmount[orderIndex] = orderAmount
             DispatchQueue.main.async {
-                self.orderView[0].isHidden = false
-                self.orderLabel[0].text = "붕어빵 \(orderAmount) 주문!"
+                self.orderView[orderIndex].isHidden = false
+                self.orderLabel[orderIndex].text = "붕어빵 \(orderAmount) 주문!"
             }
             DispatchQueue.global().async {
-                self.orderStatus[0] = 0
-                self.orderIsRunning[0] = true
+                self.orderStatus[orderIndex] = 0
+                self.orderIsRunning[orderIndex] = true
                 let runLoop = RunLoop.current
-                self.orderTimer[0] = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countOrderTime), userInfo: nil, repeats: true)
+                self.orderTimer[orderIndex] = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countOrderTime), userInfo: ["index": orderIndex], repeats: true)
                 
-                while self.orderIsRunning[0] {
+                while self.orderIsRunning[orderIndex] {
                     runLoop.run(until: Date().addingTimeInterval(0.1))
                 }
             }
         }
     }
     
-    @objc func countOrderTime() {
-        orderTimeCount[0] += 1
-        if orderTimeCount[0] >= 15 {
-            orderBoongAmount[0] = -1
-            orderStatus[0] = -1
+    @objc func countOrderTime(_ sender: Timer) {
+        guard let userInfo = sender.userInfo as? Dictionary<String, Int> else {
+            return
+        }
+        guard let index = userInfo["index"] else {
+            return
+        }
+        orderTimeCount[index] += 1
+        if orderTimeCount[index] >= 20 {
+            orderBoongAmount[index] = -1
+            orderStatus[index] = -1
             DispatchQueue.main.async {
-                self.orderView[0].backgroundColor = .white
-                self.orderView[0].isHidden = true
+                self.orderView[index].backgroundColor = .white
+                self.orderView[index].isHidden = true
                 
             }
             self.life -= 1
             setLife()
-            orderTimeCount[0] = 0
-            orderTimer[0].invalidate()
-            orderIsRunning[0] = false
-        } else if orderTimeCount[0] >= 10 {
-            orderStatus[0] = 1
+            orderTimeCount[index] = 0
+            orderTimer[index].invalidate()
+            orderIsRunning[index] = false
+        } else if orderTimeCount[index] >= 10 {
+            orderStatus[index] = 1
             DispatchQueue.main.async {
-                self.orderView[0].backgroundColor = .red
+                self.orderView[index].backgroundColor = .red
             }
         }
     }

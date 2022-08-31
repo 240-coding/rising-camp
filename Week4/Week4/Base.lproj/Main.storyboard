@@ -115,6 +115,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="boong0"/>
+                                                <connections>
+                                                    <action selector="pressedBoongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0I-hl-XpI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbX-0C-GlJ">
                                                 <rect key="frame" x="0.0" y="110" width="187" height="100"/>
@@ -123,6 +126,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="boong0"/>
+                                                <connections>
+                                                    <action selector="pressedBoongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nii-MC-tCm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgS-c1-tVE">
                                                 <rect key="frame" x="0.0" y="220" width="187" height="100"/>
@@ -131,6 +137,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="boong0"/>
+                                                <connections>
+                                                    <action selector="pressedBoongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="flS-8u-PbB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lko-X3-b5f">
                                                 <rect key="frame" x="0.0" y="330" width="187" height="100"/>
@@ -139,6 +148,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="boong0"/>
+                                                <connections>
+                                                    <action selector="pressedBoongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xht-Ub-8bE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -152,6 +164,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="boong0"/>
+                                                <connections>
+                                                    <action selector="pressedBoongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2h-17-SvP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkO-cw-Bav">
                                                 <rect key="frame" x="0.0" y="110" width="187" height="100"/>
@@ -160,6 +175,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="boong0"/>
+                                                <connections>
+                                                    <action selector="pressedBoongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PAh-iY-k1d"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngj-6v-4zJ">
                                                 <rect key="frame" x="0.0" y="220" width="187" height="100"/>
@@ -168,6 +186,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="boong0"/>
+                                                <connections>
+                                                    <action selector="pressedBoongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eWH-1h-NaG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRH-0C-d00">
                                                 <rect key="frame" x="0.0" y="330" width="187" height="100"/>
@@ -176,6 +197,9 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="boong0"/>
+                                                <connections>
+                                                    <action selector="pressedBoongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gWb-pi-yxf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -245,6 +269,14 @@
                         <outletCollection property="toolButtons" destination="dM3-eZ-JWV" collectionClass="NSMutableArray" id="eSH-uE-CCj"/>
                         <outletCollection property="toolButtons" destination="hNA-rx-t1Q" collectionClass="NSMutableArray" id="cms-fc-MHa"/>
                         <outletCollection property="toolButtons" destination="ERq-hA-FJp" collectionClass="NSMutableArray" id="gS3-Pz-GiG"/>
+                        <outletCollection property="boongButtons" destination="qvi-uq-gUr" collectionClass="NSMutableArray" id="2rp-bM-F26"/>
+                        <outletCollection property="boongButtons" destination="mfU-qH-A72" collectionClass="NSMutableArray" id="Dw8-f3-wDV"/>
+                        <outletCollection property="boongButtons" destination="FbX-0C-GlJ" collectionClass="NSMutableArray" id="vCc-EJ-tiM"/>
+                        <outletCollection property="boongButtons" destination="NkO-cw-Bav" collectionClass="NSMutableArray" id="QEB-dR-MYF"/>
+                        <outletCollection property="boongButtons" destination="WgS-c1-tVE" collectionClass="NSMutableArray" id="HbB-Ne-9mQ"/>
+                        <outletCollection property="boongButtons" destination="ngj-6v-4zJ" collectionClass="NSMutableArray" id="lpz-DA-vlE"/>
+                        <outletCollection property="boongButtons" destination="Lko-X3-b5f" collectionClass="NSMutableArray" id="mcu-cg-Nlv"/>
+                        <outletCollection property="boongButtons" destination="aRH-0C-d00" collectionClass="NSMutableArray" id="5Sc-7W-haW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

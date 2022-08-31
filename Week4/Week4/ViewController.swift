@@ -147,7 +147,11 @@ class ViewController: UIViewController {
             boongTimer[i].invalidate()
             boongIsRunning[i] = false
         }
-        print("끝!!!")
+        let alert = UIAlertController(title: "Game Over!", message: "당신의 점수는 \(score)점입니다.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
+        }
     }
     
     // MARK: - 도구 선택 관련
@@ -253,6 +257,7 @@ class ViewController: UIViewController {
     // MARK: - 봉투 관련
     
     @IBAction func pressedBagButton() {
+        print(boongInBagAmount)
         if boongInBagAmount == orderBoongAmount[0] {
             print("성공!")
             score += 10

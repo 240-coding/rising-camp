@@ -121,7 +121,13 @@ class ViewController: UIViewController {
             boongGrillLevel[index] = 1
         } else {
             boongGrillLevel[index] = 2
+            if boongStates[index] == 3 {
+                DispatchQueue.main.async {
+                    self.boongButtons[index].setImage(UIImage(named: "boong6"), for: .normal)
+                }
+            }
         }
+        print(boongTimeCount[index])
     }
     
     func initBoongs(_ index: Int) {

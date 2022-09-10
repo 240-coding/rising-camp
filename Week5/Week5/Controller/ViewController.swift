@@ -16,7 +16,6 @@ private let category = ["박스오피스", "상영예정", "돌비시네마", "�
 class ViewController: UIViewController {
     
     // MARK: - Properties
-    @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var eventCollectionView: UICollectionView!
     
     @IBOutlet weak var roundView: UIView!
@@ -27,8 +26,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        gradientView.setGradient()
         configureNavigationBar()
         configureEventCollectionView()
         configureRoundView()

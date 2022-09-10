@@ -68,11 +68,13 @@
                         <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                     </buttonConfiguration>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Was-g4-RO8">
-                    <rect key="frame" x="10" y="106.5" width="394" height="43"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Was-g4-RO8">
+                    <rect key="frame" x="8" y="106.5" width="398" height="86"/>
                     <string key="text">서울특별시 마포구 월드컵로 240, 지상2층(성산동, 월드컵주경기장)
 대표자 홍정인 • 개인정보보호책임자  공성진 
-사업자등록번호 211-86-59478 • 통신판매업신고번호 제 2020-서울마포-4545</string>
+사업자등록번호 211-86-59478 • 통신판매업신고번호 제 2020-서울마포-4545호 
+
+ⓒ MegaboxJoongAng. Inc.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -80,9 +82,11 @@
             </subviews>
             <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Was-g4-RO8" secondAttribute="trailing" constant="8" id="0Ke-OP-qz8"/>
                 <constraint firstItem="RmS-PG-t8r" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="HCc-UD-T94"/>
                 <constraint firstItem="kY4-h1-Ez4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MPN-av-64T"/>
                 <constraint firstItem="Was-g4-RO8" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XHE-Qk-Laf"/>
+                <constraint firstItem="Was-g4-RO8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ZcM-D4-bTt"/>
                 <constraint firstItem="kY4-h1-Ez4" firstAttribute="top" secondItem="RmS-PG-t8r" secondAttribute="bottom" constant="8" id="bVX-zF-AJ9"/>
                 <constraint firstItem="Was-g4-RO8" firstAttribute="top" secondItem="kY4-h1-Ez4" secondAttribute="bottom" constant="16" id="mGo-KB-hOP"/>
                 <constraint firstItem="RmS-PG-t8r" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mqK-bw-nL3"/>

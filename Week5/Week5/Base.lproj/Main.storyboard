@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6t-tK-CK0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6t-tK-CK0" customClass="GradientView" customModule="Week5" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                             </view>
@@ -277,18 +277,28 @@
                                                             <action selector="pressedMoreMovieButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="YBB-88-oOc"/>
                                                         </connections>
                                                     </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-ka-hIu" customClass="BottomInfoView" customModule="Week5" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="625" width="414" height="200"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="200" id="cQN-Fc-BzV"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="KjL-tQ-GNS" firstAttribute="leading" secondItem="Sxl-fu-hi4" secondAttribute="leading" id="27H-u5-SSh"/>
                                                     <constraint firstAttribute="height" constant="825" id="4rj-Ad-MBo"/>
                                                     <constraint firstItem="njc-Jr-Ke7" firstAttribute="leading" secondItem="Sxl-fu-hi4" secondAttribute="leading" id="BMQ-hS-Acw"/>
+                                                    <constraint firstItem="rzj-ka-hIu" firstAttribute="leading" secondItem="Sxl-fu-hi4" secondAttribute="leading" id="Ccp-j8-L23"/>
                                                     <constraint firstItem="dpf-XG-xHv" firstAttribute="top" secondItem="njc-Jr-Ke7" secondAttribute="bottom" id="Ivv-vb-b2b"/>
                                                     <constraint firstItem="dpf-XG-xHv" firstAttribute="leading" secondItem="Sxl-fu-hi4" secondAttribute="leading" constant="16" id="MEn-tN-0M6"/>
                                                     <constraint firstItem="KjL-tQ-GNS" firstAttribute="top" secondItem="Sxl-fu-hi4" secondAttribute="top" constant="32" id="T9Q-wl-8Fk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rzj-ka-hIu" secondAttribute="trailing" id="V9z-5P-axp"/>
                                                     <constraint firstAttribute="trailing" secondItem="KjL-tQ-GNS" secondAttribute="trailing" id="XdP-FV-kUK"/>
                                                     <constraint firstItem="njc-Jr-Ke7" firstAttribute="top" secondItem="KjL-tQ-GNS" secondAttribute="bottom" constant="8" id="cK0-cc-jsD"/>
                                                     <constraint firstAttribute="trailing" secondItem="njc-Jr-Ke7" secondAttribute="trailing" id="h5X-e9-Jqb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="rzj-ka-hIu" secondAttribute="bottom" id="lJ2-Ht-hex"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -316,7 +326,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="lightGray"/>
                         <constraints>
                             <constraint firstItem="x6t-tK-CK0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KGY-W3-ehi"/>
                             <constraint firstItem="2Pu-Fn-s3a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aBf-GV-ZsY"/>
@@ -332,7 +342,6 @@
                     <connections>
                         <outlet property="categoryCollectionView" destination="KjL-tQ-GNS" id="dkI-kD-t4R"/>
                         <outlet property="eventCollectionView" destination="6Da-72-0rd" id="n5D-q2-g3M"/>
-                        <outlet property="gradientView" destination="x6t-tK-CK0" id="E7g-wr-JkC"/>
                         <outlet property="movieCollectionView" destination="njc-Jr-Ke7" id="m2h-8H-Gz4"/>
                         <outlet property="roundView" destination="Sxl-fu-hi4" id="2Ei-Qd-PLW"/>
                     </connections>
@@ -376,7 +385,7 @@
                     <connections>
                         <segue destination="SXX-Tz-GuG" kind="relationship" relationship="viewControllers" id="tko-w7-cS0"/>
                         <segue destination="Hwq-UT-sCM" kind="relationship" relationship="viewControllers" id="WHU-gt-GeR"/>
-                        <segue destination="BeE-EP-qqm" kind="relationship" relationship="viewControllers" id="Qlp-SX-r9y"/>
+                        <segue destination="EMh-nv-iHV" kind="relationship" relationship="viewControllers" id="Qlp-SX-r9y"/>
                         <segue destination="ob5-oe-xtG" kind="relationship" relationship="viewControllers" id="RDI-8x-JdQ"/>
                         <segue destination="kZF-wD-GlA" kind="relationship" relationship="viewControllers" id="VMv-kB-DmR"/>
                     </connections>
@@ -401,21 +410,33 @@
             </objects>
             <point key="canvasLocation" x="-204" y="799"/>
         </scene>
-        <!--예매-->
+        <!--View Controller-->
         <scene sceneID="xGk-yI-Lsa">
             <objects>
                 <viewController id="BeE-EP-qqm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dTz-16-HHS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Pq-0J-47j" customClass="GradientView" customModule="Week5" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LXb-Om-4fE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Pq-0J-47j" firstAttribute="top" secondItem="dTz-16-HHS" secondAttribute="top" id="0no-1d-3pE"/>
+                            <constraint firstItem="LXb-Om-4fE" firstAttribute="bottom" secondItem="6Pq-0J-47j" secondAttribute="bottom" constant="350" id="ARh-iN-Phe"/>
+                            <constraint firstItem="6Pq-0J-47j" firstAttribute="trailing" secondItem="LXb-Om-4fE" secondAttribute="trailing" id="qCX-TC-5JU"/>
+                            <constraint firstItem="6Pq-0J-47j" firstAttribute="leading" secondItem="LXb-Om-4fE" secondAttribute="leading" id="xiD-Tp-90X"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="예매" image="ticket" catalog="system" selectedImage="ticket.fill" id="xQR-sW-2pN"/>
+                    <navigationItem key="navigationItem" id="VUh-Ee-99C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owE-jd-J0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-218" y="1525"/>
+            <point key="canvasLocation" x="691.304347826087" y="1524.7767857142856"/>
         </scene>
         <!--모바일오더-->
         <scene sceneID="XjA-o2-cTg">
@@ -449,6 +470,25 @@
             </objects>
             <point key="canvasLocation" x="-204" y="2939"/>
         </scene>
+        <!--예매-->
+        <scene sceneID="SZ7-LW-PHR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EMh-nv-iHV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="예매" image="ticket" catalog="system" selectedImage="ticket.fill" id="xQR-sW-2pN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qq9-Va-5NZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BeE-EP-qqm" kind="relationship" relationship="rootViewController" id="RA7-ng-yjj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EWd-2i-Rg6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-218.84057971014494" y="1524.7767857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bag" catalog="system" width="128" height="128"/>
@@ -463,6 +503,9 @@
         <image name="takeoutbag.and.cup.and.straw.fill" catalog="system" width="128" height="110"/>
         <image name="ticket" catalog="system" width="128" height="84"/>
         <image name="ticket.fill" catalog="system" width="128" height="84"/>
+        <namedColor name="lightGray">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="mint">
             <color red="0.33333333333333331" green="0.71372549019607845" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -15,6 +15,7 @@
 		8970C7E028C4F472002C5543 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8970C7DE28C4F472002C5543 /* LaunchScreen.storyboard */; };
 		89BB21BC28CB759100D503F8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB21BB28CB759100D503F8 /* Utils.swift */; };
 		89BB21C028CB7E5400D503F8 /* HomeEventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BB21BF28CB7E5400D503F8 /* HomeEventCollectionViewCell.swift */; };
+		89F9CC0D28CC241100041438 /* HomeCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F9CC0C28CC241100041438 /* HomeCategoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8970C7E128C4F472002C5543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89BB21BB28CB759100D503F8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		89BB21BF28CB7E5400D503F8 /* HomeEventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEventCollectionViewCell.swift; sourceTree = "<group>"; };
+		89F9CC0C28CC241100041438 /* HomeCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				89BB21BF28CB7E5400D503F8 /* HomeEventCollectionViewCell.swift */,
+				89F9CC0C28CC241100041438 /* HomeCategoryCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8970C7D828C4F472002C5543 /* ViewController.swift in Sources */,
+				89F9CC0D28CC241100041438 /* HomeCategoryCollectionViewCell.swift in Sources */,
 				89BB21C028CB7E5400D503F8 /* HomeEventCollectionViewCell.swift in Sources */,
 				8970C7D428C4F472002C5543 /* AppDelegate.swift in Sources */,
 				8970C7D628C4F472002C5543 /* SceneDelegate.swift in Sources */,

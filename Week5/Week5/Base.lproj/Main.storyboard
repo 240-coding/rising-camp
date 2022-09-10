@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -78,12 +79,81 @@
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ccv-wl-au9"/>
                                                 </connections>
                                             </collectionView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sxl-fu-hi4" userLabel="roundView">
+                                                <rect key="frame" x="0.0" y="173" width="414" height="825"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KjL-tQ-GNS">
+                                                        <rect key="frame" x="0.0" y="32" width="414" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="ys0-nY-l2K"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lxr-bW-MlB">
+                                                            <size key="itemSize" width="128" height="59"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCategoryCell" id="f8c-AL-9Xc" customClass="HomeCategoryCollectionViewCell" customModule="Week5" customModuleProvider="target">
+                                                                <rect key="frame" x="8" y="0.0" width="128" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tCb-RV-ncW">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6je-HE-65B">
+                                                                            <rect key="frame" x="43.5" y="14.5" width="41" height="21"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSp-yr-o46">
+                                                                            <rect key="frame" x="43.5" y="37.5" width="41" height="2"/>
+                                                                            <color key="backgroundColor" name="navy"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="2" id="zss-mx-c1V"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="YSp-yr-o46" firstAttribute="centerX" secondItem="tCb-RV-ncW" secondAttribute="centerX" id="0oL-go-vf2"/>
+                                                                        <constraint firstItem="YSp-yr-o46" firstAttribute="width" secondItem="6je-HE-65B" secondAttribute="width" id="cTi-OX-moJ"/>
+                                                                        <constraint firstItem="6je-HE-65B" firstAttribute="centerX" secondItem="tCb-RV-ncW" secondAttribute="centerX" id="gRd-bT-NG8"/>
+                                                                        <constraint firstItem="6je-HE-65B" firstAttribute="centerY" secondItem="tCb-RV-ncW" secondAttribute="centerY" id="o7c-TI-tea"/>
+                                                                        <constraint firstItem="YSp-yr-o46" firstAttribute="top" secondItem="6je-HE-65B" secondAttribute="bottom" constant="2" id="ueh-BK-GC6"/>
+                                                                    </constraints>
+                                                                </collectionViewCellContentView>
+                                                                <size key="customSize" width="128" height="50"/>
+                                                                <connections>
+                                                                    <outlet property="bottomView" destination="YSp-yr-o46" id="vri-oh-0XT"/>
+                                                                    <outlet property="label" destination="6je-HE-65B" id="9HN-bj-zs2"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="Ghb-g8-ksC"/>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="sex-mN-7FT"/>
+                                                        </connections>
+                                                    </collectionView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="KjL-tQ-GNS" firstAttribute="leading" secondItem="Sxl-fu-hi4" secondAttribute="leading" id="27H-u5-SSh"/>
+                                                    <constraint firstAttribute="height" constant="825" id="4rj-Ad-MBo"/>
+                                                    <constraint firstItem="KjL-tQ-GNS" firstAttribute="top" secondItem="Sxl-fu-hi4" secondAttribute="top" constant="32" id="T9Q-wl-8Fk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KjL-tQ-GNS" secondAttribute="trailing" id="XdP-FV-kUK"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="6Da-72-0rd" firstAttribute="leading" secondItem="UwV-q8-Jqv" secondAttribute="leading" id="3Rw-DK-XMB"/>
                                             <constraint firstAttribute="height" constant="1000" id="O16-zQ-JGj"/>
+                                            <constraint firstAttribute="trailing" secondItem="Sxl-fu-hi4" secondAttribute="trailing" id="SCG-Lf-Ame"/>
                                             <constraint firstItem="6Da-72-0rd" firstAttribute="top" secondItem="UwV-q8-Jqv" secondAttribute="top" constant="16" id="XeC-Nf-bqk"/>
+                                            <constraint firstItem="Sxl-fu-hi4" firstAttribute="leading" secondItem="UwV-q8-Jqv" secondAttribute="leading" id="feg-58-Fws"/>
+                                            <constraint firstItem="Sxl-fu-hi4" firstAttribute="top" secondItem="6Da-72-0rd" secondAttribute="bottom" constant="32" id="t26-Qi-FEG"/>
                                             <constraint firstAttribute="trailing" secondItem="6Da-72-0rd" secondAttribute="trailing" id="wzp-Eo-vAU"/>
                                         </constraints>
                                     </view>
@@ -114,8 +184,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Jvn-fV-xMe"/>
                     <connections>
+                        <outlet property="categoryCollectionView" destination="KjL-tQ-GNS" id="dkI-kD-t4R"/>
                         <outlet property="eventCollectionView" destination="6Da-72-0rd" id="n5D-q2-g3M"/>
                         <outlet property="gradientView" destination="x6t-tK-CK0" id="E7g-wr-JkC"/>
+                        <outlet property="roundView" destination="Sxl-fu-hi4" id="2Ei-Qd-PLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -150,7 +222,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7V6-Gy-rwl">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.10196078431372549" green="0.75294117647058822" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" red="0.10196078431372549" green="0.75294117647058822" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
@@ -243,11 +315,17 @@
         <image name="takeoutbag.and.cup.and.straw.fill" catalog="system" width="128" height="110"/>
         <image name="ticket" catalog="system" width="128" height="84"/>
         <image name="ticket.fill" catalog="system" width="128" height="84"/>
+        <namedColor name="navy">
+            <color red="0.078431372549019607" green="0.078431372549019607" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

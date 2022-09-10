@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8945180028CCF3310097E677 /* BottomInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894517FF28CCF3310097E677 /* BottomInfoView.xib */; };
+		8945180228CCF9690097E677 /* BottomInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945180128CCF9690097E677 /* BottomInfoView.swift */; };
 		8970C7D428C4F472002C5543 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970C7D328C4F472002C5543 /* AppDelegate.swift */; };
 		8970C7D628C4F472002C5543 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970C7D528C4F472002C5543 /* SceneDelegate.swift */; };
 		8970C7D828C4F472002C5543 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970C7D728C4F472002C5543 /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		894517FF28CCF3310097E677 /* BottomInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomInfoView.xib; sourceTree = "<group>"; };
+		8945180128CCF9690097E677 /* BottomInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomInfoView.swift; sourceTree = "<group>"; };
 		8970C7D028C4F472002C5543 /* Week5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8970C7D328C4F472002C5543 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8970C7D528C4F472002C5543 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				89BB21BF28CB7E5400D503F8 /* HomeEventCollectionViewCell.swift */,
 				89F9CC0C28CC241100041438 /* HomeCategoryCollectionViewCell.swift */,
 				89F9CC0E28CC39D200041438 /* HomeMovieCollectionViewCell.swift */,
+				894517FF28CCF3310097E677 /* BottomInfoView.xib */,
+				8945180128CCF9690097E677 /* BottomInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +162,7 @@
 				8970C7E028C4F472002C5543 /* LaunchScreen.storyboard in Resources */,
 				8970C7DD28C4F472002C5543 /* Assets.xcassets in Resources */,
 				8970C7DB28C4F472002C5543 /* Main.storyboard in Resources */,
+				8945180028CCF3310097E677 /* BottomInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +176,7 @@
 				8970C7D828C4F472002C5543 /* ViewController.swift in Sources */,
 				89F9CC0F28CC39D200041438 /* HomeMovieCollectionViewCell.swift in Sources */,
 				89F9CC0D28CC241100041438 /* HomeCategoryCollectionViewCell.swift in Sources */,
+				8945180228CCF9690097E677 /* BottomInfoView.swift in Sources */,
 				89BB21C028CB7E5400D503F8 /* HomeEventCollectionViewCell.swift in Sources */,
 				8970C7D428C4F472002C5543 /* AppDelegate.swift in Sources */,
 				8970C7D628C4F472002C5543 /* SceneDelegate.swift in Sources */,

@@ -9,6 +9,7 @@ import UIKit
 
 private let eventCellIdentifier = "HomeEventCell"
 private let categoryCellIdentifier = "HomeCategoryCell"
+private let movieCellIdentifier = "HomeMovieCell"
 
 private let category = ["박스오피스", "상영예정", "돌비시네마", "라스트특가", "단독", "클소", "필스"]
 
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var roundView: UIView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    @IBOutlet weak var movieCollectionView: UICollectionView!
     
     var selectedCategoryCell = 0
 
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
         configureRoundView()
     }
     
+    // MARK: - Configure UI
     func configureNavigationBar() {
         let leftBarButton = UIBarButtonItem(image: UIImage(systemName: "ticket"), style: .plain, target: nil, action: nil)
         navigationItem.leftBarButtonItem = leftBarButton
@@ -54,6 +57,11 @@ class ViewController: UIViewController {
         roundView.layer.cornerRadius = 20
         roundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
+    
+    // MARK: - Actions
+    @IBAction func pressedMoreMovieButton() {
+        print("Pressed More Movie Button")
+    }
 }
 
 // MARK: - UICollectionView
@@ -63,6 +71,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             return 10
         } else if collectionView == categoryCollectionView {
             return category.count
+        } else if collectionView == movieCollectionView {
+            return 10
         }
         return 0
     }
@@ -84,6 +94,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                 cell.isSelected = true
             }
             return cell
+        } else if collectionView == movieCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieCellIdentifier, for: indexPath) as? HomeMovieCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.rankLabel.isHidden = selectedCategoryCell == 0 ? false : true
+            return cell
         }
         
         
@@ -104,8 +120,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                 label.sizeToFit()
                 return label
             }()
-            width = label.frame.width + 30
+            width = label.frame.width + 24
             height = 50
+        } else if collectionView == movieCollectionView {
+            width = 160
+            height = 320
         }
         return CGSize(width: width, height: height)
     }
@@ -116,29 +135,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             guard let cell = collectionView.cellForItem(at: indexPath) as? HomeCategoryCollectionViewCell else { return }
             cell.configureSelectedStatus()
             selectedCategoryCell = indexPath.row
+            movieCollectionView.reloadData()
         }
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-//        if collectionView == categoryCollectionView {
-//            guard let cell = collectionView.cellForItem(at: indexPath) as? HomeCategoryCollectionViewCell else { return }
-//            cell.configureUnselectedStatus()
-//        }
-//    }
-//
 }
-//
-//override var isSelected: Bool {
-//    willSet {
-//        super.isSelected = newValue
-//        if newValue {
-//            label.font = .systemFont(ofSize: 17)
-//            label.textColor = UIColor(named: "navy")
-//            bottomView.isHidden = false
-//        } else {
-//            label.font = .systemFont(ofSize: 17, weight: .light)
-//            label.textColor = .gray
-//            bottomView.isHidden = true
-//        }
-//    }
-//}

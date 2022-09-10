@@ -410,29 +410,80 @@
             </objects>
             <point key="canvasLocation" x="-204" y="799"/>
         </scene>
-        <!--View Controller-->
+        <!--Reservation View Controller-->
         <scene sceneID="xGk-yI-Lsa">
             <objects>
-                <viewController id="BeE-EP-qqm" sceneMemberID="viewController">
+                <viewController id="BeE-EP-qqm" customClass="ReservationViewController" customModule="Week5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dTz-16-HHS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Pq-0J-47j" customClass="GradientView" customModule="Week5" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="bYf-J3-A36">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ns4-Nb-ahB">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpR-wd-Zv9">
+                                                <rect key="frame" x="16" y="32" width="197.5" height="57.5"/>
+                                                <string key="text">당신의 마음을 채우는
+두 시간의 이야기</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Pq-0J-47j" customClass="GradientView" customModule="Week5" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="463" id="MAS-rr-LUY"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpQ-Uv-Ve9" customClass="BottomInfoView" customModule="Week5" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="800" width="414" height="200"/>
+                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="dZU-Nv-0pg"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WpR-wd-Zv9" firstAttribute="leading" secondItem="ns4-Nb-ahB" secondAttribute="leading" constant="16" id="5ws-Qw-96z"/>
+                                            <constraint firstItem="6Pq-0J-47j" firstAttribute="leading" secondItem="ns4-Nb-ahB" secondAttribute="leading" id="7Jj-e0-a1U"/>
+                                            <constraint firstAttribute="trailing" secondItem="dpQ-Uv-Ve9" secondAttribute="trailing" id="7oc-JZ-8Dk"/>
+                                            <constraint firstItem="WpR-wd-Zv9" firstAttribute="top" secondItem="ns4-Nb-ahB" secondAttribute="top" constant="32" id="ISU-eQ-aY2"/>
+                                            <constraint firstAttribute="height" constant="1000" id="Mei-wh-NnT"/>
+                                            <constraint firstItem="6Pq-0J-47j" firstAttribute="top" secondItem="ns4-Nb-ahB" secondAttribute="top" id="Y0X-Hs-86C"/>
+                                            <constraint firstAttribute="bottom" secondItem="dpQ-Uv-Ve9" secondAttribute="bottom" id="gKd-if-4Tf"/>
+                                            <constraint firstItem="dpQ-Uv-Ve9" firstAttribute="leading" secondItem="ns4-Nb-ahB" secondAttribute="leading" id="rob-kn-dCr"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Pq-0J-47j" secondAttribute="trailing" id="yXj-jU-obc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ns4-Nb-ahB" firstAttribute="trailing" secondItem="Hxu-HP-SJn" secondAttribute="trailing" id="SHa-TL-TLA"/>
+                                    <constraint firstItem="ns4-Nb-ahB" firstAttribute="width" secondItem="C2a-QL-7M1" secondAttribute="width" id="Vr7-BA-m9j"/>
+                                    <constraint firstItem="ns4-Nb-ahB" firstAttribute="bottom" secondItem="Hxu-HP-SJn" secondAttribute="bottom" id="byJ-vN-6Lu"/>
+                                    <constraint firstItem="ns4-Nb-ahB" firstAttribute="top" secondItem="Hxu-HP-SJn" secondAttribute="top" id="uLs-my-O1Q"/>
+                                    <constraint firstItem="ns4-Nb-ahB" firstAttribute="leading" secondItem="Hxu-HP-SJn" secondAttribute="leading" id="y0l-p7-RxE"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Hxu-HP-SJn"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="C2a-QL-7M1"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LXb-Om-4fE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Pq-0J-47j" firstAttribute="top" secondItem="dTz-16-HHS" secondAttribute="top" id="0no-1d-3pE"/>
-                            <constraint firstItem="LXb-Om-4fE" firstAttribute="bottom" secondItem="6Pq-0J-47j" secondAttribute="bottom" constant="350" id="ARh-iN-Phe"/>
-                            <constraint firstItem="6Pq-0J-47j" firstAttribute="trailing" secondItem="LXb-Om-4fE" secondAttribute="trailing" id="qCX-TC-5JU"/>
-                            <constraint firstItem="6Pq-0J-47j" firstAttribute="leading" secondItem="LXb-Om-4fE" secondAttribute="leading" id="xiD-Tp-90X"/>
+                            <constraint firstAttribute="bottom" secondItem="bYf-J3-A36" secondAttribute="bottom" id="3R5-v0-EIH"/>
+                            <constraint firstItem="bYf-J3-A36" firstAttribute="top" secondItem="dTz-16-HHS" secondAttribute="top" id="A9d-4B-z5W"/>
+                            <constraint firstItem="bYf-J3-A36" firstAttribute="leading" secondItem="LXb-Om-4fE" secondAttribute="leading" id="cou-KA-WPc"/>
+                            <constraint firstItem="bYf-J3-A36" firstAttribute="trailing" secondItem="LXb-Om-4fE" secondAttribute="trailing" id="ubb-Nn-xIi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VUh-Ee-99C"/>
+                    <connections>
+                        <outlet property="scrollView" destination="bYf-J3-A36" id="Yvc-uS-ywC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owE-jd-J0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -517,6 +568,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

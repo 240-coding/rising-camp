@@ -19,3 +19,20 @@ extension UIView {
         layer.insertSublayer(gradient, at: 0)
     }
 }
+
+extension UIViewController {
+    func setNavigationBarBackground() {
+        if #available(iOS 15, *) {
+            let navigationBarAppearance = UINavigationBarAppearance()
+            navigationBarAppearance.configureWithOpaqueBackground()
+            navigationBarAppearance.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor : UIColor.white
+            ]
+            navigationController!.navigationBar.standardAppearance = navigationBarAppearance
+            navigationController!.navigationBar.standardAppearance.backgroundColor = UIColor(named: "navigation")
+            navigationController!.navigationBar.compactAppearance = navigationBarAppearance
+            navigationController!.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+            navigationController!.navigationBar.scrollEdgeAppearance?.backgroundColor = UIColor.clear
+        }
+    }
+}

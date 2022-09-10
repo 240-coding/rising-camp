@@ -33,16 +33,11 @@ class ViewController: UIViewController {
     
     // MARK: - Configure UI
     func configureNavigationBar() {
-        let leftBarButton = UIBarButtonItem(image: UIImage(systemName: "ticket"), style: .plain, target: nil, action: nil)
-        navigationItem.leftBarButtonItem = leftBarButton
-        
+        setNavigationBarItems()
         let imageView = UIImageView(image: UIImage(named: "logo"))
         imageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
         imageView.contentMode = .scaleAspectFit
         navigationItem.titleView = imageView
-        
-        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: nil, action: nil)
-        navigationItem.rightBarButtonItem = rightBarButton
     }
     
     func configureEventCollectionView() {

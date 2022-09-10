@@ -424,21 +424,21 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ns4-Nb-ahB">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Pq-0J-47j" customClass="GradientView" customModule="Week5" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
+                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="463" id="MAS-rr-LUY"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpR-wd-Zv9">
-                                                <rect key="frame" x="16" y="32" width="197.5" height="57.5"/>
+                                                <rect key="frame" x="16" y="128" width="197.5" height="57.5"/>
                                                 <string key="text">당신의 마음을 채우는
 두 시간의 이야기</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Pq-0J-47j" customClass="GradientView" customModule="Week5" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="463"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="463" id="MAS-rr-LUY"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpQ-Uv-Ve9" customClass="BottomInfoView" customModule="Week5" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="800" width="414" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -446,16 +446,97 @@
                                                     <constraint firstAttribute="height" constant="200" id="dZU-Nv-0pg"/>
                                                 </constraints>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GlT-te-Pup">
+                                                <rect key="frame" x="16.5" y="365.5" width="381" height="200"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSF-JD-ndU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="200"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mn-ee-sDf">
+                                                                <rect key="frame" x="16" y="24" width="101" height="41"/>
+                                                                <string key="text">어느 곳에서
+보고 싶으세요?</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="극장별 예매" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLP-9r-1Xh">
+                                                                <rect key="frame" x="16" y="81" width="64.5" height="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reservation1" translatesAutoresizingMaskIntoConstraints="NO" id="oAa-sA-sYU">
+                                                                <rect key="frame" x="16" y="114" width="60" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="60" id="Oy4-zJ-czo"/>
+                                                                    <constraint firstAttribute="height" constant="60" id="flg-ez-vDD"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="oAa-sA-sYU" firstAttribute="leading" secondItem="eSF-JD-ndU" secondAttribute="leading" constant="16" id="6P4-MY-aRs"/>
+                                                            <constraint firstAttribute="height" constant="200" id="9DW-sP-8d3"/>
+                                                            <constraint firstItem="oAa-sA-sYU" firstAttribute="top" secondItem="dLP-9r-1Xh" secondAttribute="bottom" constant="16" id="Joh-66-ZLd"/>
+                                                            <constraint firstItem="dLP-9r-1Xh" firstAttribute="top" secondItem="9mn-ee-sDf" secondAttribute="bottom" constant="16" id="NI1-j2-RHy"/>
+                                                            <constraint firstItem="9mn-ee-sDf" firstAttribute="leading" secondItem="eSF-JD-ndU" secondAttribute="leading" constant="16" id="cXa-o9-CCl"/>
+                                                            <constraint firstItem="9mn-ee-sDf" firstAttribute="top" secondItem="eSF-JD-ndU" secondAttribute="top" constant="24" id="oGQ-2Y-hQ3"/>
+                                                            <constraint firstItem="dLP-9r-1Xh" firstAttribute="leading" secondItem="eSF-JD-ndU" secondAttribute="leading" constant="16" id="xUx-vp-Ej6"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agj-9l-u53">
+                                                        <rect key="frame" x="194.5" y="0.0" width="186.5" height="200"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzH-0G-Tfy">
+                                                                <rect key="frame" x="16" y="24" width="101" height="41"/>
+                                                                <string key="text">어떤 영화를 
+보고 싶으세요?</string>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화별 예매" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM2-un-V0D">
+                                                                <rect key="frame" x="16" y="81" width="64.5" height="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reservation2" translatesAutoresizingMaskIntoConstraints="NO" id="6iM-Ym-sqY">
+                                                                <rect key="frame" x="16" y="114" width="60" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="ZYL-np-zYr"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="vsA-51-K7u"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="6iM-Ym-sqY" firstAttribute="top" secondItem="kM2-un-V0D" secondAttribute="bottom" constant="16" id="GNw-9v-r1B"/>
+                                                            <constraint firstItem="wzH-0G-Tfy" firstAttribute="top" secondItem="agj-9l-u53" secondAttribute="top" constant="24" id="NsW-t1-UKx"/>
+                                                            <constraint firstItem="wzH-0G-Tfy" firstAttribute="leading" secondItem="agj-9l-u53" secondAttribute="leading" constant="16" id="aBS-re-bmG"/>
+                                                            <constraint firstItem="kM2-un-V0D" firstAttribute="top" secondItem="wzH-0G-Tfy" secondAttribute="bottom" constant="16" id="bvq-qS-fsb"/>
+                                                            <constraint firstItem="kM2-un-V0D" firstAttribute="leading" secondItem="agj-9l-u53" secondAttribute="leading" constant="16" id="cj5-kb-3z1"/>
+                                                            <constraint firstAttribute="height" constant="200" id="crk-l2-3CJ"/>
+                                                            <constraint firstItem="6iM-Ym-sqY" firstAttribute="leading" secondItem="agj-9l-u53" secondAttribute="leading" constant="16" id="tnn-Gg-7nN"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="WpR-wd-Zv9" firstAttribute="leading" secondItem="ns4-Nb-ahB" secondAttribute="leading" constant="16" id="5ws-Qw-96z"/>
                                             <constraint firstItem="6Pq-0J-47j" firstAttribute="leading" secondItem="ns4-Nb-ahB" secondAttribute="leading" id="7Jj-e0-a1U"/>
                                             <constraint firstAttribute="trailing" secondItem="dpQ-Uv-Ve9" secondAttribute="trailing" id="7oc-JZ-8Dk"/>
-                                            <constraint firstItem="WpR-wd-Zv9" firstAttribute="top" secondItem="ns4-Nb-ahB" secondAttribute="top" constant="32" id="ISU-eQ-aY2"/>
+                                            <constraint firstItem="WpR-wd-Zv9" firstAttribute="top" secondItem="ns4-Nb-ahB" secondAttribute="top" constant="128" id="ISU-eQ-aY2"/>
                                             <constraint firstAttribute="height" constant="1000" id="Mei-wh-NnT"/>
+                                            <constraint firstItem="GlT-te-Pup" firstAttribute="top" secondItem="WpR-wd-Zv9" secondAttribute="bottom" constant="180" id="UPY-nb-YsF"/>
                                             <constraint firstItem="6Pq-0J-47j" firstAttribute="top" secondItem="ns4-Nb-ahB" secondAttribute="top" id="Y0X-Hs-86C"/>
                                             <constraint firstAttribute="bottom" secondItem="dpQ-Uv-Ve9" secondAttribute="bottom" id="gKd-if-4Tf"/>
+                                            <constraint firstItem="agj-9l-u53" firstAttribute="width" secondItem="ns4-Nb-ahB" secondAttribute="width" multiplier="0.45" id="iyy-hx-5J5"/>
                                             <constraint firstItem="dpQ-Uv-Ve9" firstAttribute="leading" secondItem="ns4-Nb-ahB" secondAttribute="leading" id="rob-kn-dCr"/>
+                                            <constraint firstItem="GlT-te-Pup" firstAttribute="centerX" secondItem="ns4-Nb-ahB" secondAttribute="centerX" id="sSK-Ui-jjA"/>
                                             <constraint firstAttribute="trailing" secondItem="6Pq-0J-47j" secondAttribute="trailing" id="yXj-jU-obc"/>
                                         </constraints>
                                     </view>
@@ -472,17 +553,19 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LXb-Om-4fE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="lightGray"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="bYf-J3-A36" secondAttribute="bottom" id="3R5-v0-EIH"/>
                             <constraint firstItem="bYf-J3-A36" firstAttribute="top" secondItem="dTz-16-HHS" secondAttribute="top" id="A9d-4B-z5W"/>
+                            <constraint firstItem="eSF-JD-ndU" firstAttribute="width" secondItem="dTz-16-HHS" secondAttribute="width" multiplier="0.45" id="aCw-u6-HS7"/>
                             <constraint firstItem="bYf-J3-A36" firstAttribute="leading" secondItem="LXb-Om-4fE" secondAttribute="leading" id="cou-KA-WPc"/>
                             <constraint firstItem="bYf-J3-A36" firstAttribute="trailing" secondItem="LXb-Om-4fE" secondAttribute="trailing" id="ubb-Nn-xIi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VUh-Ee-99C"/>
                     <connections>
-                        <outlet property="scrollView" destination="bYf-J3-A36" id="Yvc-uS-ywC"/>
+                        <outletCollection property="reservationMenuView" destination="eSF-JD-ndU" collectionClass="NSMutableArray" id="k5D-Ui-HzH"/>
+                        <outletCollection property="reservationMenuView" destination="agj-9l-u53" collectionClass="NSMutableArray" id="FHB-ng-ggv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owE-jd-J0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -550,6 +633,8 @@
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="reservation1" width="244" height="196"/>
+        <image name="reservation2" width="288" height="228"/>
         <image name="takeoutbag.and.cup.and.straw" catalog="system" width="128" height="110"/>
         <image name="takeoutbag.and.cup.and.straw.fill" catalog="system" width="128" height="110"/>
         <image name="ticket" catalog="system" width="128" height="84"/>
@@ -565,6 +650,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

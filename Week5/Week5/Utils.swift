@@ -33,6 +33,15 @@ extension UIViewController {
             navigationController!.navigationBar.compactAppearance = navigationBarAppearance
             navigationController!.navigationBar.scrollEdgeAppearance = navigationBarAppearance
             navigationController!.navigationBar.scrollEdgeAppearance?.backgroundColor = UIColor.clear
+            navigationController!.navigationBar.tintColor = .white
         }
+    }
+    
+    func setNavigationBarItems() {
+        let leftBarButton = UIBarButtonItem(image: UIImage(systemName: "ticket"), style: .plain, target: nil, action: nil)
+        navigationItem.leftBarButtonItem = leftBarButton
+        
+        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = rightBarButton
     }
 }

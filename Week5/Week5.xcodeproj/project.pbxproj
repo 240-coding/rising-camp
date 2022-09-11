@@ -29,6 +29,9 @@
 		8945182F28CE017E0097E677 /* MyNewSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8945182E28CE017E0097E677 /* MyNewSectionHeaderView.xib */; };
 		8945183128CE028D0097E677 /* MyNewSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945183028CE028D0097E677 /* MyNewSectionHeaderView.swift */; };
 		8945183528CE0A680097E677 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945183428CE0A680097E677 /* MyNavigationController.swift */; };
+		8945183828CE0F050097E677 /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945183728CE0F050097E677 /* BoxOffice.swift */; };
+		8945183B28CE18D40097E677 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945183A28CE18D40097E677 /* MovieInfo.swift */; };
+		8945183D28CE19200097E677 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945183C28CE19200097E677 /* URLConstants.swift */; };
 		8970C7D428C4F472002C5543 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970C7D328C4F472002C5543 /* AppDelegate.swift */; };
 		8970C7D628C4F472002C5543 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970C7D528C4F472002C5543 /* SceneDelegate.swift */; };
 		8970C7D828C4F472002C5543 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970C7D728C4F472002C5543 /* ViewController.swift */; };
@@ -61,6 +64,9 @@
 		8945182E28CE017E0097E677 /* MyNewSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyNewSectionHeaderView.xib; sourceTree = "<group>"; };
 		8945183028CE028D0097E677 /* MyNewSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNewSectionHeaderView.swift; sourceTree = "<group>"; };
 		8945183428CE0A680097E677 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		8945183728CE0F050097E677 /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
+		8945183A28CE18D40097E677 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
+		8945183C28CE19200097E677 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		8970C7D028C4F472002C5543 /* Week5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8970C7D328C4F472002C5543 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8970C7D528C4F472002C5543 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +156,24 @@
 			path = My;
 			sourceTree = "<group>";
 		};
+		8945183628CE0CA50097E677 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8945183728CE0F050097E677 /* BoxOffice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8945183928CE18B80097E677 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8945183628CE0CA50097E677 /* Model */,
+				8945183A28CE18D40097E677 /* MovieInfo.swift */,
+				8945183C28CE19200097E677 /* URLConstants.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		8970C7C728C4F472002C5543 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +193,7 @@
 		8970C7D228C4F472002C5543 /* Week5 */ = {
 			isa = PBXGroup;
 			children = (
+				8945183928CE18B80097E677 /* Networking */,
 				89BB21BE28CB7E1F00D503F8 /* View */,
 				89BB21BD28CB7E1700D503F8 /* Controller */,
 				89BB21BB28CB759100D503F8 /* Utils.swift */,
@@ -300,6 +325,7 @@
 				8945181D28CD89B00097E677 /* MyViewController.swift in Sources */,
 				8945183128CE028D0097E677 /* MyNewSectionHeaderView.swift in Sources */,
 				8945180228CCF9690097E677 /* BottomInfoView.swift in Sources */,
+				8945183828CE0F050097E677 /* BoxOffice.swift in Sources */,
 				8945180B28CD176A0097E677 /* MovieSelectViewController.swift in Sources */,
 				89BB21C028CB7E5400D503F8 /* HomeEventCollectionViewCell.swift in Sources */,
 				8945180828CD08310097E677 /* ReservationViewController.swift in Sources */,
@@ -307,8 +333,10 @@
 				8945181A28CD78060097E677 /* MovieInfoViewController.swift in Sources */,
 				8945181F28CD91960097E677 /* LoginViewController.swift in Sources */,
 				8945182B28CDE60D0097E677 /* MyNewHeaderView.swift in Sources */,
+				8945183B28CE18D40097E677 /* MovieInfo.swift in Sources */,
 				8970C7D628C4F472002C5543 /* SceneDelegate.swift in Sources */,
 				8945183528CE0A680097E677 /* MyNavigationController.swift in Sources */,
+				8945183D28CE19200097E677 /* URLConstants.swift in Sources */,
 				89BB21BC28CB759100D503F8 /* Utils.swift in Sources */,
 				8945180628CCFC4D0097E677 /* GradientView.swift in Sources */,
 			);

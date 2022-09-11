@@ -6,12 +6,19 @@
 //
 
 import UIKit
+import Alamofire
 
 private let eventCellIdentifier = "HomeEventCell"
 private let categoryCellIdentifier = "HomeCategoryCell"
 private let movieCellIdentifier = "HomeMovieCell"
 
 private let category = ["박스오피스", "상영예정", "돌비시네마", "라스트특가", "단독", "클소", "필스"]
+
+struct MovieList {
+    let title: String
+    let rank: String
+    let audiCount: String
+}
 
 class ViewController: UIViewController {
     
@@ -23,6 +30,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var movieCollectionView: UICollectionView!
     
     var selectedCategoryCell = 0
+    var movieList: [MovieList] = []
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -30,6 +38,7 @@ class ViewController: UIViewController {
         configureNavigationBar()
         configureEventCollectionView()
         configureRoundView()
+        fetchMovieData()
     }
     
     // MARK: - Configure UI
@@ -63,6 +72,23 @@ class ViewController: UIViewController {
         }
         navigationController?.pushViewController(nextViewController, animated: true)
     }
+    
+    // MARK: - Networking
+    func fetchMovieData() {
+        MovieInfo.shared.requestBoxofficeData { result in
+            switch result {
+            case .success(let data):
+                let movieData = data.boxOfficeResult.dailyBoxOfficeList
+                for movie in movieData {
+                    self.movieList.append(MovieList(title: movie.movieNm, rank: movie.rank, audiCount: movie.audiCnt))
+                }
+                self.movieCollectionView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+
 }
 
 // MARK: - UICollectionView
@@ -73,7 +99,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         } else if collectionView == categoryCollectionView {
             return category.count
         } else if collectionView == movieCollectionView {
-            return 10
+            return movieList.count
         }
         return 0
     }
@@ -100,7 +126,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: movieCellIdentifier, for: indexPath) as? HomeMovieCollectionViewCell else {
                 return UICollectionViewCell()
             }
+            let movie = movieList[indexPath.row]
+            
             cell.rankLabel.isHidden = selectedCategoryCell == 0 ? false : true
+            cell.titleLabel.text = movie.title
+            cell.rankLabel.text = movie.rank
+            cell.todayLabel.text = movie.audiCount + "명"
             cell.reservationButton.addTarget(self, action: #selector(pressedReservationButton), for: .touchUpInside)
             return cell
         }

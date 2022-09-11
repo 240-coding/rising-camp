@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     
     var selectedCategoryCell = 0
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
         imageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
         imageView.contentMode = .scaleAspectFit
         navigationItem.titleView = imageView
+        navigationItem.backButtonTitle = ""
     }
     
     func configureEventCollectionView() {
@@ -54,6 +56,13 @@ class ViewController: UIViewController {
     @IBAction func pressedMoreMovieButton() {
         print("Pressed More Movie Button")
     }
+    
+    @objc func pressedReservationButton() {
+        guard let nextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieInfo") as? MovieInfoViewController else {
+            return
+        }
+        navigationController?.pushViewController(nextViewController, animated: true)
+    }
 }
 
 // MARK: - UICollectionView
@@ -69,6 +78,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return 0
     }
     
+    // cellForItemAt
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == eventCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: eventCellIdentifier, for: indexPath) as? HomeEventCollectionViewCell else {
@@ -91,6 +101,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                 return UICollectionViewCell()
             }
             cell.rankLabel.isHidden = selectedCategoryCell == 0 ? false : true
+            cell.reservationButton.addTarget(self, action: #selector(pressedReservationButton), for: .touchUpInside)
             return cell
         }
         
@@ -99,6 +110,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         
     }
     
+    // sizeForItemAt
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var width: CGFloat = 0, height: CGFloat = 0
         if collectionView == eventCollectionView {

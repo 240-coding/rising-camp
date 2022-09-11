@@ -34,6 +34,8 @@ extension UIViewController {
             navigationController!.navigationBar.scrollEdgeAppearance = navigationBarAppearance
             navigationController!.navigationBar.scrollEdgeAppearance?.backgroundColor = UIColor.clear
             navigationController!.navigationBar.tintColor = .white
+            navigationController!.navigationBar.backIndicatorImage = UIImage(systemName: "arrow.backward")
+            navigationController!.navigationBar.backIndicatorTransitionMaskImage = UIImage(systemName: "arrow.backward")
         }
     }
     

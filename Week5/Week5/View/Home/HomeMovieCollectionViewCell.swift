@@ -13,7 +13,7 @@ class HomeMovieCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var gradeImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var todayLabel: UILabel!
-    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var reservationButton: UIButton!
     
     override func awakeFromNib() {

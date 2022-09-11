@@ -7,11 +7,23 @@
 
 import UIKit
 
+private let cellIdentifier = "MovieCell"
+private let reuseIdentifier = "reusableView"
+
 class MovieSelectViewController: UIViewController {
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationItem()
+        collectionView.register(UINib(nibName: "MovieCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: reuseIdentifier)
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+//        configureSearchBar()
     }
     
     func setNavigationItem() {
@@ -40,8 +52,62 @@ class MovieSelectViewController: UIViewController {
         dismiss(animated: true)
     }
     
-    @IBAction func pressedButton() {
-        let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CinemaSelect")
-        present(nextVC, animated: true)
+    func configureSearchBar() {
+        let searchTextField: UITextField = searchBar.value(forKey: "searchField") as? UITextField ?? UITextField()
+        searchBar.searchTextField.backgroundColor = .white
+        searchTextField.backgroundColor = .white
+        searchTextField.layer.borderColor = UIColor.lightGray.cgColor
+        searchTextField.layer.borderWidth = 1
+        searchTextField.font = .systemFont(ofSize: 14)
+        searchTextField.textAlignment = NSTextAlignment.left
+        let image: UIImage = UIImage(systemName: "magnifyingglass")!
+        let imageView: UIImageView = UIImageView.init(image: image)
+        imageView.tintColor = .black
+        searchTextField.leftView = nil
+        searchTextField.rightView = imageView
+        searchTextField.rightViewMode = UITextField.ViewMode.always
+
+
     }
+    
+}
+
+extension MovieSelectViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? MovieCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width / 3 - 10
+        let height: CGFloat = 240
+        return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: reuseIdentifier, for: indexPath) as? MovieCollectionReusableView else {
+                return UICollectionReusableView()
+            }
+            return headerView
+        default:
+            assert(false)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        let width = collectionView.frame.width
+        let height = 100.0
+        
+        return CGSize(width: width, height: height)
+    }
+    
 }

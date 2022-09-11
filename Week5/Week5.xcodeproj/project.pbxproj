@@ -31,7 +31,8 @@
 		8945183528CE0A680097E677 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945183428CE0A680097E677 /* MyNavigationController.swift */; };
 		8945183828CE0F050097E677 /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945183728CE0F050097E677 /* BoxOffice.swift */; };
 		8945183B28CE18D40097E677 /* MovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945183A28CE18D40097E677 /* MovieInfo.swift */; };
-		8945183D28CE19200097E677 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945183C28CE19200097E677 /* URLConstants.swift */; };
+		8945183F28CE84490097E677 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945183E28CE84490097E677 /* URLConstant.swift */; };
+		8945184128CE84A30097E677 /* AdditionalMovieInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8945184028CE84A30097E677 /* AdditionalMovieInfo.swift */; };
 		8970C7D428C4F472002C5543 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970C7D328C4F472002C5543 /* AppDelegate.swift */; };
 		8970C7D628C4F472002C5543 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970C7D528C4F472002C5543 /* SceneDelegate.swift */; };
 		8970C7D828C4F472002C5543 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8970C7D728C4F472002C5543 /* ViewController.swift */; };
@@ -66,7 +67,8 @@
 		8945183428CE0A680097E677 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		8945183728CE0F050097E677 /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
 		8945183A28CE18D40097E677 /* MovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfo.swift; sourceTree = "<group>"; };
-		8945183C28CE19200097E677 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		8945183E28CE84490097E677 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
+		8945184028CE84A30097E677 /* AdditionalMovieInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalMovieInfo.swift; sourceTree = "<group>"; };
 		8970C7D028C4F472002C5543 /* Week5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8970C7D328C4F472002C5543 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8970C7D528C4F472002C5543 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				8945183728CE0F050097E677 /* BoxOffice.swift */,
+				8945184028CE84A30097E677 /* AdditionalMovieInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,7 +172,7 @@
 			children = (
 				8945183628CE0CA50097E677 /* Model */,
 				8945183A28CE18D40097E677 /* MovieInfo.swift */,
-				8945183C28CE19200097E677 /* URLConstants.swift */,
+				8945183E28CE84490097E677 /* URLConstant.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				8970C7D828C4F472002C5543 /* ViewController.swift in Sources */,
 				8945182828CDDED70097E677 /* MyNewViewController.swift in Sources */,
 				8945181128CD660E0097E677 /* MovieCollectionViewCell.swift in Sources */,
+				8945183F28CE84490097E677 /* URLConstant.swift in Sources */,
 				89F9CC0F28CC39D200041438 /* HomeMovieCollectionViewCell.swift in Sources */,
 				8945180D28CD1EDB0097E677 /* CinemaSelectViewController.swift in Sources */,
 				8945181628CD68910097E677 /* MovieCollectionReusableView.swift in Sources */,
@@ -328,6 +332,7 @@
 				8945183828CE0F050097E677 /* BoxOffice.swift in Sources */,
 				8945180B28CD176A0097E677 /* MovieSelectViewController.swift in Sources */,
 				89BB21C028CB7E5400D503F8 /* HomeEventCollectionViewCell.swift in Sources */,
+				8945184128CE84A30097E677 /* AdditionalMovieInfo.swift in Sources */,
 				8945180828CD08310097E677 /* ReservationViewController.swift in Sources */,
 				8970C7D428C4F472002C5543 /* AppDelegate.swift in Sources */,
 				8945181A28CD78060097E677 /* MovieInfoViewController.swift in Sources */,
@@ -336,7 +341,6 @@
 				8945183B28CE18D40097E677 /* MovieInfo.swift in Sources */,
 				8970C7D628C4F472002C5543 /* SceneDelegate.swift in Sources */,
 				8945183528CE0A680097E677 /* MyNavigationController.swift in Sources */,
-				8945183D28CE19200097E677 /* URLConstants.swift in Sources */,
 				89BB21BC28CB759100D503F8 /* Utils.swift in Sources */,
 				8945180628CCFC4D0097E677 /* GradientView.swift in Sources */,
 			);

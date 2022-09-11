@@ -15,9 +15,10 @@ private let movieCellIdentifier = "HomeMovieCell"
 private let category = ["박스오피스", "상영예정", "돌비시네마", "라스트특가", "단독", "클소", "필스"]
 
 struct MovieList {
-    let title: String
-    let rank: String
-    let audiCount: String
+    var movieCode: String
+    var title: String
+    var rank: String
+    var audiCount: String
 }
 
 class ViewController: UIViewController {
@@ -80,7 +81,7 @@ class ViewController: UIViewController {
             case .success(let data):
                 let movieData = data.boxOfficeResult.dailyBoxOfficeList
                 for movie in movieData {
-                    self.movieList.append(MovieList(title: movie.movieNm, rank: movie.rank, audiCount: movie.audiCnt))
+                    self.movieList.append(MovieList(movieCode: movie.movieCd, title: movie.movieNm, rank: movie.rank, audiCount: movie.audiCnt))
                 }
                 self.movieCollectionView.reloadData()
             case .failure(let error):
@@ -127,6 +128,22 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
                 return UICollectionViewCell()
             }
             let movie = movieList[indexPath.row]
+            
+            MovieInfo.shared.requestAdditionalMovieData(query: movie.title) { result in
+                switch result {
+                case .success(let data):
+                    if let url = URL(string: data.items[0].image) {
+                        cell.posterImageView.load(url: url)
+                    } else {
+                        print("Fail to load image url")
+                    }
+                    DispatchQueue.main.async {
+                        cell.ratingLabel.text = data.items[0].userRating
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
             
             cell.rankLabel.isHidden = selectedCategoryCell == 0 ? false : true
             cell.titleLabel.text = movie.title

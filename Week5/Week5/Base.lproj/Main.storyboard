@@ -1115,6 +1115,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="로그인">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="pressLoginButton" destination="kZF-wD-GlA" eventType="touchUpInside" id="Rzf-dV-8tL"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfp-iQ-uRT">
                                                         <rect key="frame" x="195" y="0.0" width="187" height="40"/>
@@ -1223,10 +1226,10 @@
             </objects>
             <point key="canvasLocation" x="704.34782608695662" y="2938.3928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="NmA-8h-4Kk">
             <objects>
-                <viewController id="8S1-Of-Vdd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="8S1-Of-Vdd" customClass="LoginViewController" customModule="Week5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IM1-az-4b1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1238,32 +1241,100 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kIr-6N-zLi">
-                                <rect key="frame" x="16" y="160" width="382" height="78"/>
+                                <rect key="frame" x="16" y="160" width="382" height="90"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="아이디" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ed8-8p-FvT">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ed8-8p-FvT">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="3oz-st-rsh"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="비밀번호" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhu-dd-aHd">
-                                        <rect key="frame" x="0.0" y="44" width="382" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhu-dd-aHd">
+                                        <rect key="frame" x="0.0" y="50" width="382" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9Gr-m3-AEB"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyb-1S-jpc">
+                                <rect key="frame" x="16" y="282" width="382" height="50"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VoV-6s-8Rx"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그인">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                </buttonConfiguration>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KHa-5p-Sft">
+                                <rect key="frame" x="65" y="348" width="284" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgM-iY-2um">
+                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="31"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="ID/PW 찾기">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMd-HZ-OHF">
+                                        <rect key="frame" x="91.5" y="7" width="3.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLG-kB-Qt5">
+                                        <rect key="frame" x="95" y="0.0" width="72.5" height="31"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="회원가입">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIN-bQ-f10">
+                                        <rect key="frame" x="167.5" y="7" width="3.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKr-Pk-zbg">
+                                        <rect key="frame" x="171" y="0.0" width="113" height="31"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="비회원 예매확인">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                        </buttonConfiguration>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="una-wS-RAC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="KHa-5p-Sft" firstAttribute="centerX" secondItem="IM1-az-4b1" secondAttribute="centerX" id="441-8G-hRt"/>
                             <constraint firstItem="kIr-6N-zLi" firstAttribute="leading" secondItem="una-wS-RAC" secondAttribute="leading" constant="16" id="6Vn-8R-31d"/>
                             <constraint firstItem="n9O-dC-HoH" firstAttribute="trailing" secondItem="una-wS-RAC" secondAttribute="trailing" id="HVS-bR-NPf"/>
+                            <constraint firstItem="KHa-5p-Sft" firstAttribute="top" secondItem="oyb-1S-jpc" secondAttribute="bottom" constant="16" id="HWr-DY-KWh"/>
+                            <constraint firstItem="oyb-1S-jpc" firstAttribute="top" secondItem="kIr-6N-zLi" secondAttribute="bottom" constant="32" id="Kq2-XK-coW"/>
+                            <constraint firstItem="una-wS-RAC" firstAttribute="trailing" secondItem="oyb-1S-jpc" secondAttribute="trailing" constant="16" id="NCZ-HN-jP5"/>
                             <constraint firstItem="n9O-dC-HoH" firstAttribute="leading" secondItem="una-wS-RAC" secondAttribute="leading" id="dXd-As-ChV"/>
+                            <constraint firstItem="oyb-1S-jpc" firstAttribute="leading" secondItem="una-wS-RAC" secondAttribute="leading" constant="16" id="iIo-kV-U4r"/>
                             <constraint firstItem="una-wS-RAC" firstAttribute="trailing" secondItem="kIr-6N-zLi" secondAttribute="trailing" constant="16" id="iIq-A3-VSr"/>
                             <constraint firstItem="n9O-dC-HoH" firstAttribute="top" secondItem="una-wS-RAC" secondAttribute="top" id="iPB-uh-Gom"/>
                             <constraint firstItem="kIr-6N-zLi" firstAttribute="top" secondItem="n9O-dC-HoH" secondAttribute="bottom" constant="72" id="j7p-Lo-UUj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="idTextField" destination="Ed8-8p-FvT" id="lR7-mz-i0h"/>
+                        <outlet property="pwTextField" destination="uhu-dd-aHd" id="Gw4-7s-vK1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBI-uD-zfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1355,6 +1426,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

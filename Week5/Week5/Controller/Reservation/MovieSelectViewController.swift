@@ -12,7 +12,6 @@ private let reuseIdentifier = "reusableView"
 
 class MovieSelectViewController: UIViewController {
     
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
@@ -50,26 +49,7 @@ class MovieSelectViewController: UIViewController {
     
     @objc func closeViewController() {
         dismiss(animated: true)
-    }
-    
-    func configureSearchBar() {
-        let searchTextField: UITextField = searchBar.value(forKey: "searchField") as? UITextField ?? UITextField()
-        searchBar.searchTextField.backgroundColor = .white
-        searchTextField.backgroundColor = .white
-        searchTextField.layer.borderColor = UIColor.lightGray.cgColor
-        searchTextField.layer.borderWidth = 1
-        searchTextField.font = .systemFont(ofSize: 14)
-        searchTextField.textAlignment = NSTextAlignment.left
-        let image: UIImage = UIImage(systemName: "magnifyingglass")!
-        let imageView: UIImageView = UIImageView.init(image: image)
-        imageView.tintColor = .black
-        searchTextField.leftView = nil
-        searchTextField.rightView = imageView
-        searchTextField.rightViewMode = UITextField.ViewMode.always
-
-
-    }
-    
+    }    
 }
 
 extension MovieSelectViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

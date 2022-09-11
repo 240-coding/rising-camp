@@ -20,6 +20,14 @@ class MyViewController: UIViewController {
         navigationItem.title = "나의 메가박스"
     }
     
+    @IBAction func pressLoginButton() {
+        guard let nextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Login") as? LoginViewController else {
+            return
+        }
+        nextViewController.modalPresentationStyle = .fullScreen
+        present(nextViewController, animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation

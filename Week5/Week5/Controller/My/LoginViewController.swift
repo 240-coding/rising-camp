@@ -12,9 +12,11 @@ import KakaoSDKUser
 
 class LoginViewController: UIViewController {
     
+    // MARK: - Properties
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var pwTextField: UITextField!
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationItem()
@@ -22,6 +24,7 @@ class LoginViewController: UIViewController {
         configureTextField(pwTextField, "비밀번호")
     }
     
+    // MARK: - Confgirue UI
     func setNavigationItem() {
         let item = UINavigationItem()
         
@@ -59,6 +62,7 @@ class LoginViewController: UIViewController {
         textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor : #colorLiteral(red: 0.7533482313, green: 0.7533482313, blue: 0.7533482313, alpha: 1)])
     }
     
+    // MARK: - Actions
     @IBAction func pressKakaoLoginButton() {
         UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
             if let error = error {
@@ -66,6 +70,38 @@ class LoginViewController: UIViewController {
             }
             else {
                 print("loginWithKakaoAccount() success.")
+                if let tabBar = self.presentingViewController as? UITabBarController {
+                    if let navigationController = tabBar.selectedViewController as? UINavigationController {
+                        let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyNew")
+                        navigationController.setViewControllers([newViewController], animated: true)
+                    }
+                    tabBar.selectedIndex = 0
+                }
+                self.dismiss(animated: true)
+            }
+        }
+    }
+    
+    @IBAction func testNavVc() {
+        if let tabBar = self.presentingViewController as? UITabBarController {
+            if let navigationController = tabBar.selectedViewController as? UINavigationController {
+                let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyNew")
+                navigationController.setViewControllers([newViewController], animated: true)
+            }
+        }
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func pressLogout() {
+        UserApi.shared.logout {(error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("logout() success.")
+                if let tabBar = self.presentingViewController as? UITabBarController {
+                    tabBar.selectedIndex = 0
+                }
                 self.dismiss(animated: true)
             }
         }

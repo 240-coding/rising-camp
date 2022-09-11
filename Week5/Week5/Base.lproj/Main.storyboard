@@ -1065,7 +1065,7 @@
         <!--My View Controller-->
         <scene sceneID="ktD-XK-zDf">
             <objects>
-                <viewController id="kZF-wD-GlA" customClass="MyViewController" customModule="Week5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="My" id="kZF-wD-GlA" customClass="MyViewController" customModule="Week5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0p7-hz-akc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1127,6 +1127,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" title="비회원 예매내역">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <segue destination="0mU-dR-kbe" kind="show" id="kVw-jo-pPv"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -1225,6 +1228,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jH-JH-cRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="704.34782608695662" y="2938.3928571428569"/>
+        </scene>
+        <!--My New View Controller-->
+        <scene sceneID="zQ6-9M-jke">
+            <objects>
+                <viewController storyboardIdentifier="MyNew" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="0mU-dR-kbe" customClass="MyNewViewController" customModule="Week5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6b5-X8-7BX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLN-pP-aVM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="0mU-dR-kbe" id="C50-E5-ncq"/>
+                                    <outlet property="delegate" destination="0mU-dR-kbe" id="V79-it-6s0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H5Y-DT-NW8"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GLN-pP-aVM" firstAttribute="leading" secondItem="H5Y-DT-NW8" secondAttribute="leading" id="W8T-gd-1Ln"/>
+                            <constraint firstAttribute="bottom" secondItem="GLN-pP-aVM" secondAttribute="bottom" id="cdp-rh-nEY"/>
+                            <constraint firstItem="GLN-pP-aVM" firstAttribute="trailing" secondItem="H5Y-DT-NW8" secondAttribute="trailing" id="f9x-pf-hlw"/>
+                            <constraint firstItem="GLN-pP-aVM" firstAttribute="top" secondItem="6b5-X8-7BX" secondAttribute="top" id="zOa-3B-HLr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Iqi-K5-rC7"/>
+                    <connections>
+                        <outlet property="tableView" destination="GLN-pP-aVM" id="OSV-I5-SNl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NYP-qO-mnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702.89855072463774" y="3710.4910714285711"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="NmA-8h-4Kk">
@@ -1372,7 +1410,7 @@
         <!--MY-->
         <scene sceneID="EpZ-yg-vrt">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cm4-tl-KKv" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cm4-tl-KKv" customClass="MyNavigationController" customModule="Week5" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="MY" image="person" catalog="system" selectedImage="person.fill" id="Ksw-pO-CRf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dww-an-jvK">
@@ -1386,7 +1424,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJA-Yz-vL6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204.34782608695653" y="2938.3928571428569"/>
+            <point key="canvasLocation" x="-204" y="3370"/>
         </scene>
     </scenes>
     <resources>

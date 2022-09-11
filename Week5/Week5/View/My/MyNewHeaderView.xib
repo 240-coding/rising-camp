@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyNewHeaderView" customModule="Week5" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MyNewHeaderView" customModule="Week5" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmV-bj-uGe">
+                    <rect key="frame" x="171" y="197" width="72.5" height="31"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="로그아웃">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label님은 일반등급입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BM-Ky-hMF">
+                    <rect key="frame" x="115.5" y="160" width="183" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="tmV-bj-uGe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="02w-wt-oYa"/>
+                <constraint firstItem="5BM-Ky-hMF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DOj-hY-vks"/>
+                <constraint firstItem="tmV-bj-uGe" firstAttribute="top" secondItem="5BM-Ky-hMF" secondAttribute="bottom" constant="16" id="OFc-6b-P6U"/>
+                <constraint firstItem="5BM-Ky-hMF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="160" id="uyx-04-rSJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="logoutButton" destination="tmV-bj-uGe" id="9ja-WJ-f0n"/>
+                <outlet property="usernameLabel" destination="5BM-Ky-hMF" id="0CB-xn-ITO"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="32.8125"/>
+        </view>
+    </objects>
+</document>

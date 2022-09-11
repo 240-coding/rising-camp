@@ -46,6 +46,14 @@ extension UIViewController {
         let rightBarButton = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: nil, action: nil)
         navigationItem.rightBarButtonItem = rightBarButton
     }
+    
+    func numberFormatter(number: String) -> String {
+        guard let number = Int(number) else { return "" }
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        return numberFormatter.string(from: NSNumber(value: number))!
+    }
 }
 
 extension UIImageView {

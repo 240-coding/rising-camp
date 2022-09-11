@@ -412,7 +412,7 @@
                                     <constraint firstAttribute="height" constant="60" id="mU6-vi-8Pm"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2T-wZ-C1Y">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p2T-wZ-C1Y">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="496"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zEa-7Y-1y5">
@@ -455,8 +455,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3AN-pd-r8b">
-                                <rect key="frame" x="24" y="548.5" width="68" height="92"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3AN-pd-r8b">
+                                <rect key="frame" x="24" y="548.5" width="366" height="92"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7O7-ZA-ChX">
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="17"/>
@@ -542,8 +542,8 @@
                                     <constraint firstAttribute="height" constant="1" id="O7g-Ze-ZsV"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6xO-Pd-Hcu">
-                                <rect key="frame" x="24" y="673.5" width="68" height="42"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6xO-Pd-Hcu">
+                                <rect key="frame" x="24" y="673.5" width="366" height="42"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ttl-tG-W4e">
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="17"/>
@@ -571,7 +571,7 @@
                                                 <color key="textColor" red="0.60392156860000001" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aF-Hy-Z5n">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aF-Hy-Z5n">
                                                 <rect key="frame" x="32.5" y="0.0" width="35.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -599,18 +599,10 @@
                                                 <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개봉 0일차" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fM-L4-jZI">
-                                                <rect key="frame" x="24" y="62.5" width="52.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="0.60392156860000001" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.14509803921568626" green="0.098039215686274508" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="0fM-L4-jZI" firstAttribute="top" secondItem="5Uc-xc-rwY" secondAttribute="bottom" constant="4" id="2wv-JV-AwG"/>
                                             <constraint firstItem="wf6-eY-HeJ" firstAttribute="leading" secondItem="dT9-A3-BrX" secondAttribute="leading" constant="24" id="QRx-hE-sCH"/>
-                                            <constraint firstItem="0fM-L4-jZI" firstAttribute="leading" secondItem="dT9-A3-BrX" secondAttribute="leading" constant="24" id="Qbd-uu-3ab"/>
                                             <constraint firstItem="wf6-eY-HeJ" firstAttribute="top" secondItem="dT9-A3-BrX" secondAttribute="top" constant="12" id="R1F-05-zh7"/>
                                             <constraint firstItem="5Uc-xc-rwY" firstAttribute="top" secondItem="wf6-eY-HeJ" secondAttribute="bottom" constant="8" id="pBm-DZ-nul"/>
                                             <constraint firstItem="5Uc-xc-rwY" firstAttribute="leading" secondItem="dT9-A3-BrX" secondAttribute="leading" constant="24" id="r12-Iw-Okq"/>
@@ -666,6 +658,7 @@
                             <constraint firstItem="gzw-fd-63e" firstAttribute="top" secondItem="6xO-Pd-Hcu" secondAttribute="bottom" constant="16" id="72p-2X-w9f"/>
                             <constraint firstItem="zEa-7Y-1y5" firstAttribute="centerX" secondItem="OHP-X0-tXG" secondAttribute="centerX" id="81G-nq-QJK"/>
                             <constraint firstItem="kpc-rp-usJ" firstAttribute="leading" secondItem="1DO-zA-uF6" secondAttribute="leading" id="ByX-fT-4jA"/>
+                            <constraint firstItem="1DO-zA-uF6" firstAttribute="trailing" secondItem="3AN-pd-r8b" secondAttribute="trailing" constant="24" id="C7y-Jx-teV"/>
                             <constraint firstItem="iiZ-Kw-qmN" firstAttribute="top" secondItem="gzw-fd-63e" secondAttribute="bottom" constant="16" id="F7Y-AD-9Oi"/>
                             <constraint firstItem="p2T-wZ-C1Y" firstAttribute="top" secondItem="OHP-X0-tXG" secondAttribute="top" id="FVU-OB-ati"/>
                             <constraint firstItem="6sW-Qp-CxE" firstAttribute="top" secondItem="3AN-pd-r8b" secondAttribute="bottom" constant="16" id="JMh-UA-XXH"/>
@@ -686,6 +679,7 @@
                             <constraint firstItem="3AN-pd-r8b" firstAttribute="leading" secondItem="1DO-zA-uF6" secondAttribute="leading" constant="24" id="lke-GV-0Eb"/>
                             <constraint firstItem="6xO-Pd-Hcu" firstAttribute="leading" secondItem="1DO-zA-uF6" secondAttribute="leading" constant="24" id="pRZ-gJ-epH"/>
                             <constraint firstItem="1DO-zA-uF6" firstAttribute="trailing" secondItem="gzw-fd-63e" secondAttribute="trailing" constant="24" id="rSb-u2-HkQ"/>
+                            <constraint firstItem="1DO-zA-uF6" firstAttribute="trailing" secondItem="6xO-Pd-Hcu" secondAttribute="trailing" constant="24" id="xFM-j9-5eT"/>
                             <constraint firstItem="UPh-zN-CBf" firstAttribute="top" secondItem="p2T-wZ-C1Y" secondAttribute="bottom" constant="16" id="z9w-Nn-ZxK"/>
                         </constraints>
                     </view>
@@ -694,12 +688,11 @@
                         <outlet property="audiAccLabel" destination="5Uc-xc-rwY" id="bdb-PT-YRn"/>
                         <outlet property="audiChangeLabel" destination="OUe-B2-qn2" id="9fG-3g-aow"/>
                         <outlet property="audiCntLabel" destination="aBA-G6-fDk" id="l7B-GH-L37"/>
-                        <outlet property="directorLabel" destination="4WL-tI-kPS" id="f0N-DH-NVU"/>
+                        <outlet property="directorLabel" destination="4WL-tI-kPS" id="t0i-WT-tZT"/>
                         <outlet property="genreLabel" destination="aqA-Tl-7v1" id="IdB-L2-OQa"/>
                         <outlet property="gradeInfoLabel" destination="DjB-bx-p73" id="4Mn-le-lfH"/>
                         <outlet property="gradeLabel" destination="Tsk-3I-cLc" id="Lk9-zQ-UUW"/>
                         <outlet property="openDateLabel" destination="CUv-va-u1I" id="oxp-Iv-Qjk"/>
-                        <outlet property="openDayLabel" destination="0fM-L4-jZI" id="f5a-n0-90H"/>
                         <outlet property="posterImageView" destination="p2T-wZ-C1Y" id="H5F-Ri-G1l"/>
                         <outlet property="ratingLabel" destination="2hd-3h-neW" id="is9-k9-NXA"/>
                         <outlet property="titleLabel" destination="QsP-gj-hoP" id="vJ6-lW-1Hm"/>

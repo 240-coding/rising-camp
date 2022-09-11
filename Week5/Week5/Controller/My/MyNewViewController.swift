@@ -72,7 +72,7 @@ extension MyNewViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "하이"
+        cell.textLabel?.text = "test"
         return cell
     }
     

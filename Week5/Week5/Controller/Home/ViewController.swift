@@ -15,10 +15,13 @@ private let movieCellIdentifier = "HomeMovieCell"
 private let category = ["박스오피스", "상영예정", "돌비시네마", "라스트특가", "단독", "클소", "필스"]
 
 struct MovieList {
-    var movieCode: String
-    var title: String
-    var rank: String
-    var audiCount: String
+//    var movieCode: String
+//    var title: String
+//    var rank: String
+//    var audiCount: String
+    var boxOffice: DailyBoxOfficeList
+    var rating: String
+    var imageUrl: String
 }
 
 class ViewController: UIViewController {
@@ -81,7 +84,8 @@ class ViewController: UIViewController {
             case .success(let data):
                 let movieData = data.boxOfficeResult.dailyBoxOfficeList
                 for movie in movieData {
-                    self.movieList.append(MovieList(movieCode: movie.movieCd, title: movie.movieNm, rank: movie.rank, audiCount: movie.audiCnt))
+//                    self.movieList.append(MovieList(movieCode: movie.movieCd, title: movie.movieNm, rank: movie.rank, audiCount: movie.audiCnt, rating: "", imageUrl: ""))
+                    self.movieList.append(MovieList(boxOffice: movie, rating: "", imageUrl: ""))
                 }
                 self.movieCollectionView.reloadData()
             case .failure(let error):
@@ -129,9 +133,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             }
             let movie = movieList[indexPath.row]
             
-            MovieInfo.shared.requestAdditionalMovieData(query: movie.title) { result in
+            MovieInfo.shared.requestAdditionalMovieData(query: movie.boxOffice.movieNm) { result in
                 switch result {
                 case .success(let data):
+                    self.movieList[indexPath.row].imageUrl = data.items[0].image
+                    self.movieList[indexPath.row].rating = data.items[0].userRating
                     if let url = URL(string: data.items[0].image) {
                         cell.posterImageView.load(url: url)
                     } else {
@@ -146,9 +152,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             }
             
             cell.rankLabel.isHidden = selectedCategoryCell == 0 ? false : true
-            cell.titleLabel.text = movie.title
-            cell.rankLabel.text = movie.rank
-            cell.todayLabel.text = movie.audiCount + "명"
+            cell.titleLabel.text = movie.boxOffice.movieNm
+            cell.rankLabel.text = movie.boxOffice.rank
+            cell.todayLabel.text = numberFormatter(number: movie.boxOffice.audiCnt) + "명"
             cell.reservationButton.addTarget(self, action: #selector(pressedReservationButton), for: .touchUpInside)
             return cell
         }
@@ -188,6 +194,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
             cell.configureSelectedStatus()
             selectedCategoryCell = indexPath.row
             movieCollectionView.reloadData()
+        } else if collectionView == movieCollectionView {
+            guard let nextViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MovieInfo") as? MovieInfoViewController else {
+                return
+            }
+            let movie = movieList[indexPath.row]
+            nextViewController.movieData.movieCode = movie.boxOffice.movieCd
+            nextViewController.movieData.rating = movie.rating
+            nextViewController.movieData.imageUrl = movie.imageUrl
+            nextViewController.movieData.audiCnt = movie.boxOffice.audiCnt
+            nextViewController.movieData.audiAcc = movie.boxOffice.audiAcc
+            nextViewController.movieData.audiChange = movie.boxOffice.audiChange
+            navigationController?.pushViewController(nextViewController, animated: true)
         }
     }
 }

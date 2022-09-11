@@ -53,4 +53,20 @@ extension MovieInfo {
                 }
             }
     }
+    
+    func requestDetailMovieData(movieCode: String, completion: @escaping (Result<DetailMovieInfo, Error>) -> Void) {
+        let baseURL = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json"
+        let parameters = ["key": key, "movieCd": movieCode]
+
+        AF.request(baseURL, method: .get, parameters: parameters)
+            .responseDecodable(of: DetailMovieInfo.self) { response in
+                switch response.result {
+                case .success(let response):
+                    completion(.success(response))
+                case .failure(let error):
+                    debugPrint(error)
+                    completion(.failure(error))
+                }
+            }
+    }
 }

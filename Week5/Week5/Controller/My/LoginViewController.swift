@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class LoginViewController: UIViewController {
     
@@ -54,5 +57,17 @@ class LoginViewController: UIViewController {
         textField.layer.masksToBounds = true
         
         textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [.foregroundColor : #colorLiteral(red: 0.7533482313, green: 0.7533482313, blue: 0.7533482313, alpha: 1)])
+    }
+    
+    @IBAction func pressKakaoLoginButton() {
+        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("loginWithKakaoAccount() success.")
+                self.dismiss(animated: true)
+            }
+        }
     }
 }

@@ -1314,6 +1314,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVQ-HO-lKM">
+                                <rect key="frame" x="103.5" y="403" width="207" height="59"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="kakao"/>
+                                <connections>
+                                    <action selector="pressKakaoLoginButton" destination="8S1-Of-Vdd" eventType="touchUpInside" id="6aT-8i-M5U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="una-wS-RAC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1324,11 +1332,13 @@
                             <constraint firstItem="KHa-5p-Sft" firstAttribute="top" secondItem="oyb-1S-jpc" secondAttribute="bottom" constant="16" id="HWr-DY-KWh"/>
                             <constraint firstItem="oyb-1S-jpc" firstAttribute="top" secondItem="kIr-6N-zLi" secondAttribute="bottom" constant="32" id="Kq2-XK-coW"/>
                             <constraint firstItem="una-wS-RAC" firstAttribute="trailing" secondItem="oyb-1S-jpc" secondAttribute="trailing" constant="16" id="NCZ-HN-jP5"/>
+                            <constraint firstItem="OVQ-HO-lKM" firstAttribute="top" secondItem="KHa-5p-Sft" secondAttribute="bottom" constant="24" id="UyL-Dq-Sdm"/>
                             <constraint firstItem="n9O-dC-HoH" firstAttribute="leading" secondItem="una-wS-RAC" secondAttribute="leading" id="dXd-As-ChV"/>
                             <constraint firstItem="oyb-1S-jpc" firstAttribute="leading" secondItem="una-wS-RAC" secondAttribute="leading" constant="16" id="iIo-kV-U4r"/>
                             <constraint firstItem="una-wS-RAC" firstAttribute="trailing" secondItem="kIr-6N-zLi" secondAttribute="trailing" constant="16" id="iIq-A3-VSr"/>
                             <constraint firstItem="n9O-dC-HoH" firstAttribute="top" secondItem="una-wS-RAC" secondAttribute="top" id="iPB-uh-Gom"/>
                             <constraint firstItem="kIr-6N-zLi" firstAttribute="top" secondItem="n9O-dC-HoH" secondAttribute="bottom" constant="72" id="j7p-Lo-UUj"/>
+                            <constraint firstItem="OVQ-HO-lKM" firstAttribute="centerX" secondItem="IM1-az-4b1" secondAttribute="centerX" id="xPi-sP-fSZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1387,6 +1397,7 @@
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="kakao" width="183" height="45"/>
         <image name="logo" width="2000" height="407"/>
         <image name="membership" width="461" height="75"/>
         <image name="person" catalog="system" width="128" height="117"/>

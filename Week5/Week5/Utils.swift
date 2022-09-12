@@ -69,3 +69,9 @@ extension UIImageView {
         }
     }
 }
+
+extension String{
+    var htmlConvertedString : String{
+        let string = self.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        return string
+    }}

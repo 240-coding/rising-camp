@@ -14,6 +14,8 @@ class MyNewViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var nickname: String?
+    let userDefaults = UserDefaults.standard
+    var userMovieList = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,11 @@ class MyNewViewController: UIViewController {
         let sectionHeaderNib = UINib(nibName: "MyNewSectionHeaderView", bundle: nil)
         tableView.register(sectionHeaderNib, forHeaderFooterViewReuseIdentifier: "sectionHeader")
         loadUserNickname()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadUserMovieList()
     }
     
     func configureNavigationBar() {
@@ -42,6 +48,29 @@ class MyNewViewController: UIViewController {
                 print("me() success.")
                 self.nickname = user?.properties?["nickname"]
                 self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func loadUserMovieList() {
+        UserApi.shared.accessTokenInfo {(accessTokenInfo, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("accessTokenInfo() success.")
+
+                //do something
+                _ = accessTokenInfo
+                guard let userId = accessTokenInfo?.id else {
+                    print("ID 불러오기 실패")
+                    return
+                }
+                self.userMovieList = self.userDefaults.object(forKey: String(userId)) as? [String] ?? []
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                print(self.userMovieList)
             }
         }
     }
@@ -67,12 +96,12 @@ class MyNewViewController: UIViewController {
 
 extension MyNewViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? 0 : 20
+        return section == 0 ? 0 : userMovieList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = userMovieList[indexPath.row]
         return cell
     }
     
@@ -80,6 +109,7 @@ extension MyNewViewController: UITableViewDelegate, UITableViewDataSource {
         return 2
     }
     
+    // Header
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return section == 0 ? 300 : 80
     }

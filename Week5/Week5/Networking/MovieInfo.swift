@@ -39,7 +39,7 @@ extension MovieInfo {
     
     func requestAdditionalMovieData(query: String, completion: @escaping (Result<AdditionalMovieInfo, Error>) -> Void) {
         let baseURL = "https://openapi.naver.com/v1/search/movie.json"
-        let parameters: [String: Any] = ["query": query, "display": 1]
+        let parameters: [String: Any] = ["query": query]
         let headers: HTTPHeaders = ["X-Naver-Client-Id": URLConstant.movieAddId, "X-Naver-Client-Secret": URLConstant.movieAddPw]
         
         AF.request(baseURL, method: .get, parameters: parameters, headers: headers)

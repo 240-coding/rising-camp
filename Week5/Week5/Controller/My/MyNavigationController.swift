@@ -14,7 +14,10 @@ class MyNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let myViewConroller = storyboard.instantiateViewController(withIdentifier: "My") as? MyViewController, let myNewViewConroller = storyboard.instantiateViewController(withIdentifier: "MyNew") as? MyNewViewController else {
             print("Can't load view controllers")

@@ -105,6 +105,34 @@ extension MyNewViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            userMovieList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            UserApi.shared.accessTokenInfo {(accessTokenInfo, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("accessTokenInfo() success.")
+
+                    //do something
+                    _ = accessTokenInfo
+                    guard let userId = accessTokenInfo?.id else {
+                        print("아이디 불러오기 실패")
+                        return
+                    }
+                    self.userDefaults.set(self.userMovieList, forKey: String(userId))
+                }
+            }
+            
+            
+        } else if editingStyle == .insert {
+            
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
